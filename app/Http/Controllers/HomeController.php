@@ -44,5 +44,8 @@ class HomeController extends Controller
     {
         return view('home');
     }
-
+    public function allitems()
+    {
+        return view('allitems');
+    }
 }

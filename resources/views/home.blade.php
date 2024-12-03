@@ -61,7 +61,15 @@ padding: 0.4rem 2rem;
     <div class="row g-3">
         <div class="col-3">
             <div class="card h-100 shadow-lg border-1">
-                <img src="/storage/images/banana.jpg" class="card-img-top" alt="Item Image" style="object-fit: cover; height: 150px;">
+                <div class="position-relative">
+                    <img src="/storage/images/banana.jpg" 
+                        class="card-img-top" 
+                        alt="Item Image" 
+                        style="object-fit: cover;">
+                    <div class="position-absolute top-0 start-0 px-2 text-white bg-danger opacity-50 " style="font-size: 0.8rem;">
+                        10 Favorites
+                    </div>
+                </div>
                 <div class="card-body d-flex flex-column">
                     <div class="d-flex justify-content-between align-items-center mb-1">
                         <a href="#" class="card-title mb-0 h5 text-decoration-none">Item Title</a>
@@ -92,7 +100,13 @@ padding: 0.4rem 2rem;
         </div>
         <div class="col-3">
             <div class="card h-100 shadow-lg border-1">
-                <img src="/storage/images/banana.jpg" class="card-img-top" alt="Item Image" style="object-fit: cover; height: 150px;">
+                                    <img src="/storage/images/banana.jpg" 
+                        class="card-img-top" 
+                        alt="Item Image" 
+                        style="object-fit: cover;">
+                    <div class="position-absolute top-0 start-0 px-2 text-white bg-danger opacity-50 " style="font-size: 0.8rem;">
+                        10 Favorites
+                    </div>
                 <div class="card-body d-flex flex-column">
                     <div class="d-flex justify-content-between align-items-center mb-1">
                         <a href="#" class="card-title mb-0 h5 text-decoration-none">Item Title</a>
@@ -123,7 +137,13 @@ padding: 0.4rem 2rem;
         </div>
         <div class="col-3">
             <div class="card h-100 shadow-lg border-1">
-                <img src="/storage/images/banana.jpg" class="card-img-top" alt="Item Image" style="object-fit: cover; height: 150px;">
+                                    <img src="/storage/images/banana.jpg" 
+                        class="card-img-top" 
+                        alt="Item Image" 
+                        style="object-fit: cover;">
+                    <div class="position-absolute top-0 start-0 px-2 text-white bg-danger opacity-50 " style="font-size: 0.8rem;">
+                        10 Favorites
+                    </div>
                 <div class="card-body d-flex flex-column">
                     <div class="d-flex justify-content-between align-items-center mb-1">
                         <a href="#" class="card-title mb-0 h5 text-decoration-none">Item Title</a>
@@ -154,7 +174,13 @@ padding: 0.4rem 2rem;
         </div>
         <div class="col-3">
             <div class="card h-100 shadow-lg border-1">
-                <img src="/storage/images/banana.jpg" class="card-img-top" alt="Item Image" style="object-fit: cover; height: 150px;">
+                                    <img src="/storage/images/banana.jpg" 
+                        class="card-img-top" 
+                        alt="Item Image" 
+                        style="object-fit: cover;">
+                    <div class="position-absolute top-0 start-0 px-2 text-white bg-danger opacity-50 " style="font-size: 0.8rem;">
+                        10 Favorites
+                    </div>
                 <div class="card-body d-flex flex-column">
                     <div class="d-flex justify-content-between align-items-center mb-1">
                         <a href="#" class="card-title mb-0 h5 text-decoration-none">Item Title</a>
@@ -185,7 +211,13 @@ padding: 0.4rem 2rem;
         </div>
         <div class="col-3">
             <div class="card h-100 shadow-lg border-1">
-                <img src="/storage/images/banana.jpg" class="card-img-top" alt="Item Image" style="object-fit: cover; height: 150px;">
+                                    <img src="/storage/images/banana.jpg" 
+                        class="card-img-top" 
+                        alt="Item Image" 
+                        style="object-fit: cover;">
+                    <div class="position-absolute top-0 start-0 px-2 text-white bg-danger opacity-50 " style="font-size: 0.8rem;">
+                        10 Favorites
+                    </div>
                 <div class="card-body d-flex flex-column">
                     <div class="d-flex justify-content-between align-items-center mb-1">
                         <a href="#" class="card-title mb-0 h5 text-decoration-none">Item Title</a>
@@ -216,7 +248,13 @@ padding: 0.4rem 2rem;
         </div>
         <div class="col-3">
             <div class="card h-100 shadow-lg border-1">
-                <img src="/storage/images/banana.jpg" class="card-img-top" alt="Item Image" style="object-fit: cover; height: 150px;">
+                                    <img src="/storage/images/banana.jpg" 
+                        class="card-img-top" 
+                        alt="Item Image" 
+                        style="object-fit: cover;">
+                    <div class="position-absolute top-0 start-0 px-2 text-white bg-danger opacity-50 " style="font-size: 0.8rem;">
+                        10 Favorites
+                    </div>
                 <div class="card-body d-flex flex-column">
                     <div class="d-flex justify-content-between align-items-center mb-1">
                         <a href="#" class="card-title mb-0 h5 text-decoration-none">Item Title</a>
@@ -247,7 +285,13 @@ padding: 0.4rem 2rem;
         </div>
         <div class="col-3">
             <div class="card h-100 shadow-lg border-1">
-                <img src="/storage/images/banana.jpg" class="card-img-top" alt="Item Image" style="object-fit: cover; height: 150px;">
+                                    <img src="/storage/images/banana.jpg" 
+                        class="card-img-top" 
+                        alt="Item Image" 
+                        style="object-fit: cover;">
+                    <div class="position-absolute top-0 start-0 px-2 text-white bg-danger opacity-50 " style="font-size: 0.8rem;">
+                        10 Favorites
+                    </div>
                 <div class="card-body d-flex flex-column">
                     <div class="d-flex justify-content-between align-items-center mb-1">
                         <a href="#" class="card-title mb-0 h5 text-decoration-none">Item Title</a>
@@ -278,7 +322,13 @@ padding: 0.4rem 2rem;
         </div>
         <div class="col-3">
             <div class="card h-100 shadow-lg border-1">
-                <img src="/storage/images/banana.jpg" class="card-img-top" alt="Item Image" style="object-fit: cover; height: 150px;">
+                                    <img src="/storage/images/banana.jpg" 
+                        class="card-img-top" 
+                        alt="Item Image" 
+                        style="object-fit: cover;">
+                    <div class="position-absolute top-0 start-0 px-2 text-white bg-danger opacity-50 " style="font-size: 0.8rem;">
+                        10 Favorites
+                    </div>
                 <div class="card-body d-flex flex-column">
                     <div class="d-flex justify-content-between align-items-center mb-1">
                         <a href="#" class="card-title mb-0 h5 text-decoration-none">Item Title</a>
@@ -309,7 +359,7 @@ padding: 0.4rem 2rem;
         </div>
     </div>
     
-    <a href="#" class="btn btn-outline-secondary w-100 mt-3 mb-5">Let's See More Organic Item</a>
+    <a href="{{route('allitems')}}" class="btn btn-outline-secondary w-100 mt-3 mb-5">Let's See More Organic Item</a>
 
     {{-- Farm Card --}}
     <p class="title mb-3 mt-5">SPOTLIGHT FARMS</p>
@@ -341,6 +391,7 @@ padding: 0.4rem 2rem;
                 </div>
             </a>            
         </div>
+
         <div class="col-md-6 mb-4">
             <a href="#" class="text-decoration-none text-dark">
                 <div class="card h-100 shadow-sm">
@@ -368,6 +419,7 @@ padding: 0.4rem 2rem;
                 </div>
             </a>            
         </div>
+        
         <div class="col-md-6 mb-4">
             <a href="#" class="text-decoration-none text-dark">
                 <div class="card h-100 shadow-sm">
