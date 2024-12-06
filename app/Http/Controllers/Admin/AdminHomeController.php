@@ -16,4 +16,9 @@ class AdminHomeController extends Controller
     {
         return view('admin.consumer-management');
     }
+
+    public function farmManagement()
+    {
+        return view('admin.farm-management');
+    }
 }

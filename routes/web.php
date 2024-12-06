@@ -41,6 +41,7 @@ Route::group(['middleware'=>'auth'], function(){
     Route::group(['prefix'=>'admin', 'as'=>'admin.', 'middleware'=>'admin'],function(){
         Route::get('/', [AdminHomeController::class, 'index'])->name('index');
         Route::get('/consumer-management', [AdminHomeController::class, 'consumerManagement'])->name('consumer.management');
+        Route::get('/farm-management', [AdminHomeController::class, 'farmManagement'])->name('farm.management');
     });
 
 });
