@@ -42,6 +42,12 @@
         flex: 1; /* メインコンテンツを拡張してフッターを下に押し出す */
     }
 
+    footer {
+        background-color: #cecdcd;
+        text-align: center;
+        padding: 10px 0; /* フッターの余白 */
+    }
+
     .brand-text {
         text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
         -webkit-text-stroke-width: 1;
@@ -103,7 +109,6 @@
     padding-top: 0 !important;
     padding-bottom: 0 !important;
     }
-
     </style>
 
     <!-- Scripts -->
@@ -111,7 +116,7 @@
 </head>
 <body class="bg-consumer">
     <div id="app" >
-        <nav class="navbar navbar-expand-md navbar-light shadow-sm mb-5" style="background:#FFF5E8;">
+        <nav class="navbar navbar-expand-md navbar-light shadow-sm" style="background:#FFF5E8;">
             <div class="container">
                 <a class="navbar-brand logo" href="{{ url('/') }}" style="display: flex; align-items:center;">
                     <img src="{{ asset('storage/images/logo.png') }}" alt="NaturalY Logo" style="height: 55px; margin-right: 10px; filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.5));">
@@ -164,94 +169,82 @@
                         </li>
                         
                         {{-- Hamburger --}}
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link mx-auto text-center nav-link right-item" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link mx-auto text-center nav-link right-item" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     <i class="fa-solid fa-burger fs-3 nav-item nav-icon"></i>
                                     <span class="nav-text">Menu</span>
-                                </a>
+                            </a>
 
-                            
-                                <div class="dropdown-menu dropdown-menu-end py-3 px-2" style="width: 180px" aria-labelledby="navbarDropdown">
-                                    <!-- User Icon and Name (Centered Horizontally) -->
-                                    <a class="dropdown-item d-flex align-items-center justify-content-center py-1" href="#" style="gap: 5px;">
-                                        <i class="fa-solid fa-circle-user text-secondary icon-sm"></i>
-                                        <span class="fs-5 text-secondary">{{ Auth::user()->name }}</span>
-                                    </a>
-                                    <hr>
-                            
-                                    <!-- Menu Items -->
-                                    <div class="row text-center">
-                                        {{-- Purchase History --}}
-                                        <div class="col-6 d-flex flex-column align-items-center">
-                                            <a class="dropdown-item p-0" href="#">
-                                                <i class="fa-solid fa-receipt text-secondary icon-sm"></i>
-                                                <p class="text-secondary mt-1 mb-0">History</p>
-                                            </a>
-                                        </div>
-                                        {{-- Favorite --}}
-                                        <div class="col-6 d-flex flex-column align-items-center">
-                                            <a class="dropdown-item p-0" href="#">
-                                                <i class="fa-regular fa-heart text-secondary icon-sm"></i>
-                                                <p class="text-secondary mt-1 mb-0">Favorite</p>
-                                            </a>
-                                        </div>
-                                    </div>
+                            <div class="dropdown-menu dropdown-menu-end py-3 px-2" style="width: 180px" aria-labelledby="navbarDropdown">
+                                <!-- User Icon and Name -->
+                                <a class="dropdown-item d-flex align-items-center justify-content-center" href="#" style="gap: 5px;">
+                                    <i class="fa-solid fa-circle-user text-secondary icon-sm"></i>
+                                            <strong class="text-secondary">{{ Auth::user()->name }}</strong>
+                                </a>
+                                <hr>
+
+                                <!-- Menu Items -->
+                                <div class="row text-center">
                                     
-                                    <div class="row text-center mt-3">
-                                        {{-- Update Profile --}}
-                                        <div class="col-6 d-flex flex-column align-items-center">
-                                            <a class="dropdown-item p-0" href="#">
-                                                <i class="fa-regular fa-address-card text-secondary icon-sm"></i>
-                                                <p class="text-secondary mt-1 mb-0">UPD Profile</p>
-                                            </a>
-                                        </div>
-                                        {{-- Following --}}
-                                        <div class="col-6 d-flex flex-column align-items-center">
-                                            <a class="dropdown-item p-0" href="#">
-                                                <i class="fa-solid fa-user-plus text-secondary icon-sm"></i>
-                                                <p class="text-secondary mt-1 mb-0">Following</p>
-                                            </a>
-                                        </div>
+                                    {{-- Purchase History --}}
+                                    <div class="col-6 d-flex flex-column align-items-center">
+                                        <a class="dropdown-item p-0" href="#">
+                                            <i class="fa-solid fa-receipt text-secondary icon-sm"></i>
+                                            <p class="text-secondary mt-1 mb-0">History</p>
+                                        </a>
                                     </div>
-                                    <hr>
-                            
-                                    <!-- Logout -->
-                                    <a class="dropdown-item d-flex align-items-center justify-content-center" href="{{ route('logout') }}"
-                                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                            <i class="fa-solid fa-right-from-bracket text-secondary icon-sm"></i>
-                                            <span class="text-secondary mt-1 mb-0 ms-2">{{ __('Logout') }}</span>
-                                    </a>
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
+
+                                    {{-- Favorite --}}
+                                    <div class="col-6 d-flex flex-column align-items-center">
+                                        <a class="dropdown-item p-0" href="#">
+                                            <i class="fa-regular fa-heart text-secondary"></i>
+                                            <p class="text-secondary mt-2 mb-0">Favorite</p>
+                                        </a>
+                                    </div>
+
+                                    {{-- Update Profile --}}
+                                    <div class="col-6 d-flex flex-column align-items-center mt-2">
+                                        <a class="dropdown-item p-0" href="#">
+                                            <i class="fa-regular fa-address-card text-secondary icon-sm"></i>
+                                            <p class="text-secondary mt-1 mb-0">UPD Profile</p>
+                                        </a>
+                                    </div>
+
+                                    {{-- Following --}}
+                                    <div class="col-6 d-flex flex-column align-items-center mt-2">
+                                        <a class="dropdown-item p-0" href="#">
+                                            <i class="fa-solid fa-user-plus text-secondary icon-sm"></i>
+                                            <p class="text-secondary mt-1 mb-0">Following</p>
+                                        </a>
+                                    </div>
                                 </div>
-                            </li>                            
+                                <hr>
+                                
+                                <!-- Logout -->
+                                <a class="dropdown-item d-flex align-items-center justify-content-center" href="{{ route('logout') }}"
+                                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                        <i class="fa-solid fa-right-from-bracket text-secondary icon-sm"></i>
+                                        <span class="text-secondary mt-1 mb-0 ms-2">{{ __('Logout') }}</span>
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </div>
+                        </li>                            
                         @endguest
                     </ul>
                 </div>
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="py-4 {{ request()->is('/') ? '' : 'mt-5' }}">
             @yield('content')
         </main>
-
+        
         <footer class="mt-5">
-            @if(View::hasSection('footer-custom'))
-                <div class="container position-relative">
-                    <div 
-                        class="py-3" 
-                        style="
-                            position: fixed; 
-                            bottom: 0; 
-                            right: 10%; 
-                        ">
-                        @yield('footer-custom')
-                    </div>
-                </div>
-            @else
-                <div class="container-fluid text-center py-2" style="background-color: #cecdcd;">
-                    <ul class="nav justify-content-center" >
+            <div class="container-fluid text-center">
+                <div class="row">
+                    <ul class="nav justify-content-center">
                         <li class="nav-item">
                             <a class="px-4 link-secondary fs-1" href="#"><i class="fa-brands fa-instagram"></i></a>
                         </li>
@@ -267,7 +260,7 @@
                     </ul>
                     <small class="text-muted">&copy; 2024 Natural Yield Market</small>
                 </div>
-            @endif
+            </div>
         </footer>
 
     </div>

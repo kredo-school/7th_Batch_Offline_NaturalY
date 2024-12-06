@@ -59,8 +59,7 @@
                                     <i class="fa-regular fa-heart"></i>
                                 </button>
                             </div>
-                            <a href="#" class="badge text-bg-success text-decoration-none mb-2" 
-                                style="display: inline-block; white-space: nowrap; max-width: fit-content;">
+                            <a href="#" class="badge text-bg-success text-decoration-none mb-2">
                                 Cucumber
                             </a>
                             <p class="card-text">
@@ -86,8 +85,7 @@
                                     <i class="fa-regular fa-heart"></i>
                                 </button>
                             </div>
-                            <a href="#" class="badge text-bg-success text-decoration-none mb-2" 
-                                style="display: inline-block; white-space: nowrap; max-width: fit-content;">
+                            <a href="#" class="badge text-bg-success text-decoration-none mb-2">
                                 Cucumber
                             </a>
                             <p class="card-text">
@@ -113,8 +111,7 @@
                                     <i class="fa-regular fa-heart"></i>
                                 </button>
                             </div>
-                            <a href="#" class="badge text-bg-success text-decoration-none mb-2" 
-                                style="display: inline-block; white-space: nowrap; max-width: fit-content;">
+                            <a href="#" class="badge text-bg-success text-decoration-none mb-2">
                                 Cucumber
                             </a>
                             <p class="card-text">
@@ -125,14 +122,15 @@
                     </div>
                 </div>
             </div>
-
     </div>
+
+    <button class="btn btn-success btn-shadow fixed-follow-button">
+        <i class="fa-solid fa-user-plus fs-4"></i>
+        <span class="text-sm">Follow</span>
+    </button>
+
 </div>
+
+
 @endsection
 
-@section('footer-custom')
-            <button class="btn btn-success btn-shadow ">
-                <i class="fa-solid fa-user-plus me-2"></i>
-                LET'S FOLLOW NOW !
-            </button>
-@endsection

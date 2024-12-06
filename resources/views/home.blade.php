@@ -78,8 +78,7 @@ padding: 0.4rem 2rem;
                                 <i class="fa-regular fa-heart"></i>
                             </button>
                         </div>
-                        <a href="#" class="badge text-bg-success text-decoration-none mb-2" 
-                            style="display: inline-block; white-space: nowrap; max-width: fit-content;">
+                        <a href="#" class="badge text-bg-success text-decoration-none mb-2">
                             Cucumber
                         </a>
                         <p class="card-text">
