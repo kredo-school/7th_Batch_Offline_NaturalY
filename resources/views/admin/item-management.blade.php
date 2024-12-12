@@ -27,7 +27,7 @@
         <button type="button" class="btn btn-primary rounded-5 px-4">Inactive</button>
     </div>
     <div class="mx-5 mb-3">
-        <a href="#" class="text-decoration-none mb-2">
+        <a href="{{ route('admin.item.show') }}" class="text-decoration-none mb-2">
             <div class="card rounded-5 text-center p-3 border-dark mb-3 shadow bg-body rounded">
                 <div class="row">
                     <div class="col-3">
