@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="card shadow-lg">
             <div class="card-body">
-                <!-- タイトル行 -->
+
                 <div class="row">
                     <p class="title text-yellowgreen text-start ms-5 mt-3 ps-3">
                         {{ __('Plant a Seed of Your Natural Journey From Here!') }}

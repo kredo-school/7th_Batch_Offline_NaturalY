@@ -1,15 +1,16 @@
 @extends('layouts.app')
-
+    
 @section('content')
+
 <div class="container">
     <div class="row justify-content-center">
-        <div class="card shadow-lg">
+        <div class="card shadow-lg px-5">
             <div class="card-body">
-                <!-- Title -->
-                <div class="row">
-                    <p class="title text-orange text-start ms-5 my-5 ps-3">
-                        {{ __("Let's Resiter Your Profile") }}
-                    </p>
+                {{-- Title --}}
+                <div class="text-center my-4">
+                    <i class="fa-solid fa-pen-nib fs-1"></i>
+                    <span class="title mx-1">Update Profile</span>
+                    <i class="fa-solid fa-pen-nib fs-1"></i>
                 </div>
 
                 <form method="GET" action="{{ route('consumer.profile') }}" enctype="multipart/form-data">
@@ -31,7 +32,6 @@
                     </div>
 
                     {{-- Zipcode --}}
-
                     <div class="mb-4">
                         <label for="zipcode" class="form-label">Zip Code</label>
                         <input type="text" name="zipcode" id="zipcode" class="form-control" placeholder="000-0000" pattern="\d{3}-\d{4}" maxlength="8">
@@ -121,14 +121,16 @@
 
                     {{-- Submit Button --}}
                     <div class="text-center mt-5">
-                        <button type="submit" class="btn btn-orange fs-5 fw-bold py-2 px-4">
+                        <button type="submit" class="btn btn-orange fs-5 fw-bold py-2 px-4 w-100">
+                            <i class="fa-solid fa-pen-nib"></i>
                             Update
                         </button>
                     </div>
+
                 </form>
             </div>
         </div>
     </div>
 </div>
-</div>
+
 @endsection

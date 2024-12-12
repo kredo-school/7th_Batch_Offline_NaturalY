@@ -26,25 +26,25 @@
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <style>
     html, body {
-        height: 100%; /* ページ全体の高さを100%に設定 */
-        margin: 0; /* デフォルトの余白を削除 */
+        height: 100%; 
+        margin: 0; 
     }
     
 
     #app {
         display: flex;
         flex-direction: column;
-        min-height: 100%; /* コンテンツが少ない場合でもページ全体を覆う */
+        min-height: 100%;
     }
 
     main {
-        flex: 1; /* メインコンテンツを拡張してフッターを下に押し出す */
+        flex: 1;
     }
 
     footer {
         background-color: #cecdcd;
         text-align: center;
-        padding: 10px 0; /* フッターの余白 */
+        padding: 10px 0; 
     }
 
     .brand-text {
@@ -102,12 +102,16 @@
     }
     .logo:hover {
     animation: shake 0.4s ease-in-out;
-    /* animationの設定 (0.5秒間、ease-in-outでアニメーション) */
     }  
     main.py-4 {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
     }
+
+    body {
+    padding-top: 80px;
+    }
+    
     </style>
 
     <!-- Scripts -->
@@ -115,7 +119,7 @@
 </head>
 <body class="bg-consumer">
     <div id="app" >
-        <nav class="navbar navbar-expand-md navbar-light shadow-sm" style="background:#FFF5E8;">
+        <nav class="navbar navbar-expand-md navbar-light shadow-sm position-fixed top-0 w-100" style="background:#FFF5E8; z-index: 1050;">
             <div class="container">
                 <a class="navbar-brand logo" href="{{ url('/') }}" style="display: flex; align-items:center;">
                     <img src="{{ asset('storage/images/logo.png') }}" alt="NaturalY Logo" style="height: 55px; margin-right: 10px; filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.5));">
@@ -157,7 +161,7 @@
                             </li>
                             @endif
                         @else
-                        <li class="my-auto me-5 nav-text">Hello, <span class="fw-bold">{{ Auth::user()->name }}</span> san!!</li>
+                        <li class="my-auto me-5 nav-text">Hello, <span class="fw-bold fs-5">{{ Auth::user()->name }}</span> san!!</li>
 
                         {{-- Cart --}}
                         <li class="nav-item  me-2">
@@ -174,9 +178,9 @@
                                     <span class="nav-text">Menu</span>
                             </a>
 
-                            <div class="dropdown-menu dropdown-menu-end py-3 px-2" style="width: 180px" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-menu dropdown-menu-end py-3 px-3" style="width: 200px" aria-labelledby="navbarDropdown">
                                 <!-- User Icon and Name -->
-                                <a class="dropdown-item d-flex align-items-center justify-content-center" href="#" style="gap: 5px;">
+                                <a class="dropdown-item d-flex align-items-center justify-content-center" href="{{route('consumer.profile')}}" style="gap: 5px;">
                                     <i class="fa-solid fa-circle-user text-secondary icon-sm"></i>
                                             <strong class="text-secondary">{{ Auth::user()->name }}</strong>
                                 </a>
@@ -184,38 +188,44 @@
 
                                 <!-- Menu Items -->
                                 <div class="row text-center">
-                                    
-                                    {{-- Purchase History --}}
+
+                                    {{-- Update Profile --}}
                                     <div class="col-6 d-flex flex-column align-items-center">
-                                        <a class="dropdown-item p-0" href="#">
-                                            <i class="fa-solid fa-receipt text-secondary icon-sm"></i>
-                                            <p class="text-secondary mt-1 mb-0">History</p>
+                                        <a class="dropdown-item p-0" href="{{route('consumer.profileUpdate')}}">
+                                            <i class="fa-solid fa-pen-nib text-secondary icon-sm"></i>
+                                            <p class="text-secondary mt-1 mb-0 text-sm">Update</p>
                                         </a>
-                                    </div>
+                                    </div>                                   
+
 
                                     {{-- Favorite --}}
                                     <div class="col-6 d-flex flex-column align-items-center">
-                                        <a class="dropdown-item p-0" href="#">
+                                        <a class="dropdown-item p-0" href="{{route('consumer.favorites')}}">
                                             <i class="fa-regular fa-heart text-secondary"></i>
-                                            <p class="text-secondary mt-2 mb-0">Favorite</p>
+                                            <p class="text-secondary mt-2 mb-0 text-sm">Favorites</p>
                                         </a>
                                     </div>
 
-                                    {{-- Update Profile --}}
-                                    <div class="col-6 d-flex flex-column align-items-center mt-2">
-                                        <a class="dropdown-item p-0" href="#">
-                                            <i class="fa-regular fa-address-card text-secondary icon-sm"></i>
-                                            <p class="text-secondary mt-1 mb-0">UPD Profile</p>
+                                </div>
+
+                                <div class="row text-center">
+
+                                    {{-- Purchase History --}}
+                                    <div class="col-6 d-flex flex-column align-items-center mt-3">
+                                        <a class="dropdown-item p-0" href="{{route('consumer.purchaceHistory')}}">
+                                            <i class="fa-solid fa-receipt text-secondary icon-sm"></i>
+                                            <p class="text-secondary mt-1 mb-0 text-sm">History</p>
                                         </a>
                                     </div>
 
                                     {{-- Following --}}
-                                    <div class="col-6 d-flex flex-column align-items-center mt-2">
-                                        <a class="dropdown-item p-0" href="#">
-                                            <i class="fa-solid fa-user-plus text-secondary icon-sm"></i>
-                                            <p class="text-secondary mt-1 mb-0">Following</p>
+                                    <div class="col-6 d-flex flex-column align-items-center mt-3">
+                                        <a class="dropdown-item p-0" href="{{route('consumer.followings')}}">
+                                            <i class="fa-solid fa-tractor text-secondary icon-sm"></i>
+                                            <p class="text-secondary mt-1 mb-0 text-sm">Followings</p>
                                         </a>
                                     </div>
+
                                 </div>
                                 <hr>
                                 

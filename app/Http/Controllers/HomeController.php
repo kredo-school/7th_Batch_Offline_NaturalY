@@ -81,4 +81,28 @@ class HomeController extends Controller
     {
         return view('consumer.order_success');
     }
+    public function favorites()
+    {
+        return view('consumer.favorites');
+    }
+    public function followings()
+    {
+        return view('consumer.followings');
+    }
+    public function purchaceHistory()
+    {
+        return view('consumer.purchace_history');
+    }
+    public function review()
+    {
+        return view('consumer.review');
+    }
+    public function profile()
+    {
+        return view('consumer.profile');
+    }
+    public function profileUpdate()
+    {
+        return view('consumer.profile_update');
+    }
 }

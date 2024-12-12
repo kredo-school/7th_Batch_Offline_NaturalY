@@ -71,853 +71,499 @@
     </form>
 
     {{-- Item Card --}}
-    <div class="row g-3 mb-4">
-        <div class="col-md-2 col-sm-4 col-6">
-            <div class="card shadow-sm border-1">
-                <!-- Image -->
-                <div class="position-relative">
-                    <img src="/storage/images/banana.jpg" 
-                        class="card-img-top" 
-                        alt="Item Image" 
-                        style="object-fit: cover; height: 100px;">
-                    <div class="position-absolute top-0 start-0 px-2 text-white bg-danger opacity-50 " style="font-size: 0.8rem;">
-                        10 Favorites
+    <div class="row g-3">
+        <div class="col-3">
+            <div class="card h-100 shadow-lg border-1">
+                <a href="{{route('showItem')}}" class=" text-decoration-none text-dark">
+                    <div class="position-relative">
+                        <img src="/storage/images/banana.jpg" 
+                            class="card-img-top" 
+                            alt="Item Image" 
+                            style="object-fit: cover;">
+                        <div class="position-absolute top-0 start-0 px-2 text-white bg-danger opacity-50 " style="font-size: 0.8rem;">
+                            10 Favorites
+                        </div>
                     </div>
-                </div>
-
-                <div class="card-body d-flex flex-column px-2pb-0">
-                    <div class="d-flex justify-content-between align-items-center mb-1">
-                        <a href="#" class="card-title mb-0 h5 text-decoration-none">Item Title</a>
-                        <button type="submit" class="btn btn-sm shadow-none p-0">
-                            <i class="fa-regular fa-heart fs-5"></i>
-                        </button>
-                    </div>
-                    <div class="">
-                        <a href="#" class="badge text-bg-success text-decoration-none rounded-pill mb-1" 
-                        style="display: inline-block; white-space: nowrap;">
-                        Cucumber
+                    <div class="card-body d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <p class="card-title mb-0 h5">Item Title</p>
+                            <button type="submit" class="btn btn-sm shadow-none p-0">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <a href="#" class="badge text-bg-success text-decoration-none mb-2">
+                            Cucumber
                         </a>
+                        <p class="card-text">
+                            Contents:{{"#"}} <br>
+                            Lorem aaa aaa ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, perferendis.</p>
+                        <h5 class="card-text text-end">$3.00</h5>
                     </div>
-                    <p class="card-text small mb-1" style="word-break: break-word;">
-                        Contents: {{ "#" }} <br>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero eaque nesciunt praesentium laboriosam amet quisquam aliquid cum excepturi ab non.
-                    </p>                
-                    <h5 class="card-text text-end mb-0">$3.00</h5>
-                </div>
-                <div class="card-footer py-1 bg-light mt-0">
-                    <a href="#" class="text-decoration-none text-dark">
+                </a>
+                <div class="card-footer py-1">
+                    <a href="{{route('farmProfile')}}" class="text-decoration-none text-dark">
                         <div class="d-flex align-items-center">
-                            <img src="/storage/images/topbanner.jpg" 
-                                alt="Farm Image" 
-                                class="img-thumbnail rounded-circle" 
-                                style="width: 35px; height: 35px; object-fit: cover;"> <!-- サムネイルサイズ調整 -->
-                            <div class="ms-2">
-                                <p class="mb-0 small">Farm Name</p> <!-- フォントサイズ調整 -->
+                            <img src="/storage/images/topbanner.jpg" alt="Farm Image" class="img-thumbnail rounded-circle" style="width: 40px; height: 40px; object-fit: cover;">
+                            <div class="ms-3">
+                                <p class="mb-0">Farm Name</p>
                             </div>
                         </div>
                     </a>
                 </div>
             </div>
         </div>
-        <div class="col-md-2 col-sm-4 col-6">
-            <div class="card shadow-sm border-1">
-                <!-- Image -->
-                                <div class="position-relative">
-                    <img src="/storage/images/banana.jpg" 
-                        class="card-img-top" 
-                        alt="Item Image" 
-                        style="object-fit: cover; height: 100px;">
-                    <div class="position-absolute top-0 start-0 px-2 text-white bg-danger opacity-50 " style="font-size: 0.78rem;">
-                        10 Favorites
+        <div class="col-3">
+            <div class="card h-100 shadow-lg border-1">
+                <a href="{{route('showItem')}}" class=" text-decoration-none text-dark">
+                    <div class="position-relative">
+                        <img src="/storage/images/banana.jpg" 
+                            class="card-img-top" 
+                            alt="Item Image" 
+                            style="object-fit: cover;">
+                        <div class="position-absolute top-0 start-0 px-2 text-white bg-danger opacity-50 " style="font-size: 0.8rem;">
+                            10 Favorites
+                        </div>
                     </div>
-                </div>
-
-                <div class="card-body d-flex flex-column px-2pb-0">
-                    <div class="d-flex justify-content-between align-items-center mb-1">
-                        <a href="#" class="card-title mb-0 h5 text-decoration-none">Item Title</a>
-                        <button type="submit" class="btn btn-sm shadow-none p-0">
-                            <i class="fa-regular fa-heart fs-5"></i>
-                        </button>
-                    </div>
-                    <div class="">
-                        <a href="#" class="badge text-bg-success text-decoration-none rounded-pill mb-1" 
-                        style="display: inline-block; white-space: nowrap;">
-                        Cucumber
+                    <div class="card-body d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <p class="card-title mb-0 h5">Item Title</p>
+                            <button type="submit" class="btn btn-sm shadow-none p-0">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <a href="#" class="badge text-bg-success text-decoration-none mb-2" 
+                            style="display: inline-block; white-space: nowrap; max-width: fit-content;">
+                            Cucumber
                         </a>
+                        <p class="card-text">
+                            Contents:{{"#"}} <br>
+                            Lorem aaa aaa ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, perferendis.</p>
+                        <h5 class="card-text text-end">$3.00</h5>
                     </div>
-                    <p class="card-text small mb-1" style="word-break: break-word;">
-                        Contents: {{ "#" }} <br>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero eaque nesciunt praesentium laboriosam amet quisquam aliquid cum excepturi ab non.
-                    </p>                
-                    <h5 class="card-text text-end mb-0">$3.00</h5>
-                </div>
-                <div class="card-footer py-1 bg-light mt-0">
-                    <a href="#" class="text-decoration-none text-dark">
+                </a>
+                <div class="card-footer py-1">
+                    <a href="{{route('farmProfile')}}" class="text-decoration-none text-dark">
                         <div class="d-flex align-items-center">
-                            <img src="/storage/images/topbanner.jpg" 
-                                alt="Farm Image" 
-                                class="img-thumbnail rounded-circle" 
-                                style="width: 35px; height: 35px; object-fit: cover;"> <!-- サムネイルサイズ調整 -->
-                            <div class="ms-2">
-                                <p class="mb-0 small">Farm Name</p> <!-- フォントサイズ調整 -->
+                            <img src="/storage/images/topbanner.jpg" alt="Farm Image" class="img-thumbnail rounded-circle" style="width: 40px; height: 40px; object-fit: cover;">
+                            <div class="ms-3">
+                                <p class="mb-0">Farm Name</p>
                             </div>
                         </div>
                     </a>
                 </div>
             </div>
         </div>
-        <div class="col-md-2 col-sm-4 col-6">
-            <div class="card shadow-sm border-1">
-                <!-- Image -->
-                                <div class="position-relative">
-                    <img src="/storage/images/banana.jpg" 
-                        class="card-img-top" 
-                        alt="Item Image" 
-                        style="object-fit: cover; height: 100px;">
-                    <div class="position-absolute top-0 start-0 px-2 text-white bg-danger opacity-50 " style="font-size: 0.78rem;">
-                        10 Favorites
+        <div class="col-3">
+            <div class="card h-100 shadow-lg border-1">
+                <a href="{{route('showItem')}}" class=" text-decoration-none text-dark">
+                    <div class="position-relative">
+                        <img src="/storage/images/banana.jpg" 
+                            class="card-img-top" 
+                            alt="Item Image" 
+                            style="object-fit: cover;">
+                        <div class="position-absolute top-0 start-0 px-2 text-white bg-danger opacity-50 " style="font-size: 0.8rem;">
+                            10 Favorites
+                        </div>
                     </div>
-                </div>
-
-                <div class="card-body d-flex flex-column px-2pb-0">
-                    <div class="d-flex justify-content-between align-items-center mb-1">
-                        <a href="#" class="card-title mb-0 h5 text-decoration-none">Item Title</a>
-                        <button type="submit" class="btn btn-sm shadow-none p-0">
-                            <i class="fa-regular fa-heart fs-5"></i>
-                        </button>
-                    </div>
-                    <div class="">
-                        <a href="#" class="badge text-bg-success text-decoration-none rounded-pill mb-1" 
-                        style="display: inline-block; white-space: nowrap;">
-                        Cucumber
+                    <div class="card-body d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <p class="card-title mb-0 h5">Item Title</p>
+                            <button type="submit" class="btn btn-sm shadow-none p-0">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <a href="#" class="badge text-bg-success text-decoration-none mb-2" 
+                            style="display: inline-block; white-space: nowrap; max-width: fit-content;">
+                            Cucumber
                         </a>
+                        <p class="card-text">
+                            Contents:{{"#"}} <br>
+                            Lorem aaa aaa ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, perferendis.</p>
+                        <h5 class="card-text text-end">$3.00</h5>
                     </div>
-                    <p class="card-text small mb-1" style="word-break: break-word;">
-                        Contents: {{ "#" }} <br>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero eaque nesciunt praesentium laboriosam amet quisquam aliquid cum excepturi ab non.
-                    </p>                
-                    <h5 class="card-text text-end mb-0">$3.00</h5>
-                </div>
-                <div class="card-footer py-1 bg-light mt-0">
-                    <a href="#" class="text-decoration-none text-dark">
+                </a>
+                <div class="card-footer py-1">
+                    <a href="{{route('farmProfile')}}" class="text-decoration-none text-dark">
                         <div class="d-flex align-items-center">
-                            <img src="/storage/images/topbanner.jpg" 
-                                alt="Farm Image" 
-                                class="img-thumbnail rounded-circle" 
-                                style="width: 35px; height: 35px; object-fit: cover;"> <!-- サムネイルサイズ調整 -->
-                            <div class="ms-2">
-                                <p class="mb-0 small">Farm Name</p> <!-- フォントサイズ調整 -->
+                            <img src="/storage/images/topbanner.jpg" alt="Farm Image" class="img-thumbnail rounded-circle" style="width: 40px; height: 40px; object-fit: cover;">
+                            <div class="ms-3">
+                                <p class="mb-0">Farm Name</p>
                             </div>
                         </div>
                     </a>
                 </div>
             </div>
         </div>
-        <div class="col-md-2 col-sm-4 col-6">
-            <div class="card shadow-sm border-1">
-                <!-- Image -->
-                                <div class="position-relative">
-                    <img src="/storage/images/banana.jpg" 
-                        class="card-img-top" 
-                        alt="Item Image" 
-                        style="object-fit: cover; height: 100px;">
-                    <div class="position-absolute top-0 start-0 px-2 text-white bg-danger opacity-50 " style="font-size: 0.78rem;">
-                        10 Favorites
+        <div class="col-3">
+            <div class="card h-100 shadow-lg border-1">
+                <a href="{{route('showItem')}}" class=" text-decoration-none text-dark">
+                    <div class="position-relative">
+                        <img src="/storage/images/banana.jpg" 
+                            class="card-img-top" 
+                            alt="Item Image" 
+                            style="object-fit: cover;">
+                        <div class="position-absolute top-0 start-0 px-2 text-white bg-danger opacity-50 " style="font-size: 0.8rem;">
+                            10 Favorites
+                        </div>
                     </div>
-                </div>
-
-                <div class="card-body d-flex flex-column px-2pb-0">
-                    <div class="d-flex justify-content-between align-items-center mb-1">
-                        <a href="#" class="card-title mb-0 h5 text-decoration-none">Item Title</a>
-                        <button type="submit" class="btn btn-sm shadow-none p-0">
-                            <i class="fa-regular fa-heart fs-5"></i>
-                        </button>
-                    </div>
-                    <div class="">
-                        <a href="#" class="badge text-bg-success text-decoration-none rounded-pill mb-1" 
-                        style="display: inline-block; white-space: nowrap;">
-                        Cucumber
+                    <div class="card-body d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <p class="card-title mb-0 h5">Item Title</p>
+                            <button type="submit" class="btn btn-sm shadow-none p-0">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <a href="#" class="badge text-bg-success text-decoration-none mb-2" 
+                            style="display: inline-block; white-space: nowrap; max-width: fit-content;">
+                            Cucumber
                         </a>
+                        <p class="card-text">
+                            Contents:{{"#"}} <br>
+                            Lorem aaa aaa ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, perferendis.</p>
+                        <h5 class="card-text text-end">$3.00</h5>
                     </div>
-                    <p class="card-text small mb-1" style="word-break: break-word;">
-                        Contents: {{ "#" }} <br>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero eaque nesciunt praesentium laboriosam amet quisquam aliquid cum excepturi ab non.
-                    </p>                
-                    <h5 class="card-text text-end mb-0">$3.00</h5>
-                </div>
-                <div class="card-footer py-1 bg-light mt-0">
-                    <a href="#" class="text-decoration-none text-dark">
+                </a>
+                <div class="card-footer py-1">
+                    <a href="{{route('farmProfile')}}" class="text-decoration-none text-dark">
                         <div class="d-flex align-items-center">
-                            <img src="/storage/images/topbanner.jpg" 
-                                alt="Farm Image" 
-                                class="img-thumbnail rounded-circle" 
-                                style="width: 35px; height: 35px; object-fit: cover;"> <!-- サムネイルサイズ調整 -->
-                            <div class="ms-2">
-                                <p class="mb-0 small">Farm Name</p> <!-- フォントサイズ調整 -->
+                            <img src="/storage/images/topbanner.jpg" alt="Farm Image" class="img-thumbnail rounded-circle" style="width: 40px; height: 40px; object-fit: cover;">
+                            <div class="ms-3">
+                                <p class="mb-0">Farm Name</p>
                             </div>
                         </div>
                     </a>
                 </div>
             </div>
         </div>
-        <div class="col-md-2 col-sm-4 col-6">
-            <div class="card shadow-sm border-1">
-                <!-- Image -->
-                                <div class="position-relative">
-                    <img src="/storage/images/banana.jpg" 
-                        class="card-img-top" 
-                        alt="Item Image" 
-                        style="object-fit: cover; height: 100px;">
-                    <div class="position-absolute top-0 start-0 px-2 text-white bg-danger opacity-50 " style="font-size: 0.78rem;">
-                        10 Favorites
+        <div class="col-3">
+            <div class="card h-100 shadow-lg border-1">
+                <a href="{{route('showItem')}}" class=" text-decoration-none text-dark">
+                    <div class="position-relative">
+                        <img src="/storage/images/banana.jpg" 
+                            class="card-img-top" 
+                            alt="Item Image" 
+                            style="object-fit: cover;">
+                        <div class="position-absolute top-0 start-0 px-2 text-white bg-danger opacity-50 " style="font-size: 0.8rem;">
+                            10 Favorites
+                        </div>
                     </div>
-                </div>
-
-                <div class="card-body d-flex flex-column px-2pb-0">
-                    <div class="d-flex justify-content-between align-items-center mb-1">
-                        <a href="#" class="card-title mb-0 h5 text-decoration-none">Item Title</a>
-                        <button type="submit" class="btn btn-sm shadow-none p-0">
-                            <i class="fa-regular fa-heart fs-5"></i>
-                        </button>
-                    </div>
-                    <div class="">
-                        <a href="#" class="badge text-bg-success text-decoration-none rounded-pill mb-1" 
-                        style="display: inline-block; white-space: nowrap;">
-                        Cucumber
+                    <div class="card-body d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <p class="card-title mb-0 h5">Item Title</p>
+                            <button type="submit" class="btn btn-sm shadow-none p-0">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <a href="#" class="badge text-bg-success text-decoration-none mb-2" 
+                            style="display: inline-block; white-space: nowrap; max-width: fit-content;">
+                            Cucumber
                         </a>
+                        <p class="card-text">
+                            Contents:{{"#"}} <br>
+                            Lorem aaa aaa ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, perferendis.</p>
+                        <h5 class="card-text text-end">$3.00</h5>
                     </div>
-                    <p class="card-text small mb-1" style="word-break: break-word;">
-                        Contents: {{ "#" }} <br>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero eaque nesciunt praesentium laboriosam amet quisquam aliquid cum excepturi ab non.
-                    </p>                
-                    <h5 class="card-text text-end mb-0">$3.00</h5>
-                </div>
-                <div class="card-footer py-1 bg-light mt-0">
-                    <a href="#" class="text-decoration-none text-dark">
+                </a>
+                <div class="card-footer py-1">
+                    <a href="{{route('farmProfile')}}" class="text-decoration-none text-dark">
                         <div class="d-flex align-items-center">
-                            <img src="/storage/images/topbanner.jpg" 
-                                alt="Farm Image" 
-                                class="img-thumbnail rounded-circle" 
-                                style="width: 35px; height: 35px; object-fit: cover;"> <!-- サムネイルサイズ調整 -->
-                            <div class="ms-2">
-                                <p class="mb-0 small">Farm Name</p> <!-- フォントサイズ調整 -->
+                            <img src="/storage/images/topbanner.jpg" alt="Farm Image" class="img-thumbnail rounded-circle" style="width: 40px; height: 40px; object-fit: cover;">
+                            <div class="ms-3">
+                                <p class="mb-0">Farm Name</p>
                             </div>
                         </div>
                     </a>
                 </div>
             </div>
         </div>
-        <div class="col-md-2 col-sm-4 col-6">
-            <div class="card shadow-sm border-1">
-                <!-- Image -->
-                                <div class="position-relative">
-                    <img src="/storage/images/banana.jpg" 
-                        class="card-img-top" 
-                        alt="Item Image" 
-                        style="object-fit: cover; height: 100px;">
-                    <div class="position-absolute top-0 start-0 px-2 text-white bg-danger opacity-50 " style="font-size: 0.78rem;">
-                        10 Favorites
+        <div class="col-3">
+            <div class="card h-100 shadow-lg border-1">
+                <a href="{{route('showItem')}}" class=" text-decoration-none text-dark">
+                    <div class="position-relative">
+                        <img src="/storage/images/banana.jpg" 
+                            class="card-img-top" 
+                            alt="Item Image" 
+                            style="object-fit: cover;">
+                        <div class="position-absolute top-0 start-0 px-2 text-white bg-danger opacity-50 " style="font-size: 0.8rem;">
+                            10 Favorites
+                        </div>
                     </div>
-                </div>
-
-                <div class="card-body d-flex flex-column px-2pb-0">
-                    <div class="d-flex justify-content-between align-items-center mb-1">
-                        <a href="#" class="card-title mb-0 h5 text-decoration-none">Item Title</a>
-                        <button type="submit" class="btn btn-sm shadow-none p-0">
-                            <i class="fa-regular fa-heart fs-5"></i>
-                        </button>
-                    </div>
-                    <div class="">
-                        <a href="#" class="badge text-bg-success text-decoration-none rounded-pill mb-1" 
-                        style="display: inline-block; white-space: nowrap;">
-                        Cucumber
+                    <div class="card-body d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <p class="card-title mb-0 h5">Item Title</p>
+                            <button type="submit" class="btn btn-sm shadow-none p-0">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <a href="#" class="badge text-bg-success text-decoration-none mb-2" 
+                            style="display: inline-block; white-space: nowrap; max-width: fit-content;">
+                            Cucumber
                         </a>
+                        <p class="card-text">
+                            Contents:{{"#"}} <br>
+                            Lorem aaa aaa ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, perferendis.</p>
+                        <h5 class="card-text text-end">$3.00</h5>
                     </div>
-                    <p class="card-text small mb-1" style="word-break: break-word;">
-                        Contents: {{ "#" }} <br>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero eaque nesciunt praesentium laboriosam amet quisquam aliquid cum excepturi ab non.
-                    </p>                
-                    <h5 class="card-text text-end mb-0">$3.00</h5>
-                </div>
-                <div class="card-footer py-1 bg-light mt-0">
-                    <a href="#" class="text-decoration-none text-dark">
+                </a>
+                <div class="card-footer py-1">
+                    <a href="{{route('farmProfile')}}" class="text-decoration-none text-dark">
                         <div class="d-flex align-items-center">
-                            <img src="/storage/images/topbanner.jpg" 
-                                alt="Farm Image" 
-                                class="img-thumbnail rounded-circle" 
-                                style="width: 35px; height: 35px; object-fit: cover;"> <!-- サムネイルサイズ調整 -->
-                            <div class="ms-2">
-                                <p class="mb-0 small">Farm Name</p> <!-- フォントサイズ調整 -->
+                            <img src="/storage/images/topbanner.jpg" alt="Farm Image" class="img-thumbnail rounded-circle" style="width: 40px; height: 40px; object-fit: cover;">
+                            <div class="ms-3">
+                                <p class="mb-0">Farm Name</p>
                             </div>
                         </div>
                     </a>
                 </div>
             </div>
         </div>
-        <div class="col-md-2 col-sm-4 col-6">
-            <div class="card shadow-sm border-1">
-                <!-- Image -->
-                                <div class="position-relative">
-                    <img src="/storage/images/banana.jpg" 
-                        class="card-img-top" 
-                        alt="Item Image" 
-                        style="object-fit: cover; height: 100px;">
-                    <div class="position-absolute top-0 start-0 px-2 text-white bg-danger opacity-50 " style="font-size: 0.78rem;">
-                        10 Favorites
+        <div class="col-3">
+            <div class="card h-100 shadow-lg border-1">
+                <a href="{{route('showItem')}}" class=" text-decoration-none text-dark">
+                    <div class="position-relative">
+                        <img src="/storage/images/banana.jpg" 
+                            class="card-img-top" 
+                            alt="Item Image" 
+                            style="object-fit: cover;">
+                        <div class="position-absolute top-0 start-0 px-2 text-white bg-danger opacity-50 " style="font-size: 0.8rem;">
+                            10 Favorites
+                        </div>
                     </div>
-                </div>
-
-                <div class="card-body d-flex flex-column px-2pb-0">
-                    <div class="d-flex justify-content-between align-items-center mb-1">
-                        <a href="#" class="card-title mb-0 h5 text-decoration-none">Item Title</a>
-                        <button type="submit" class="btn btn-sm shadow-none p-0">
-                            <i class="fa-regular fa-heart fs-5"></i>
-                        </button>
-                    </div>
-                    <div class="">
-                        <a href="#" class="badge text-bg-success text-decoration-none rounded-pill mb-1" 
-                        style="display: inline-block; white-space: nowrap;">
-                        Cucumber
+                    <div class="card-body d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <p class="card-title mb-0 h5">Item Title</p>
+                            <button type="submit" class="btn btn-sm shadow-none p-0">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <a href="#" class="badge text-bg-success text-decoration-none mb-2" 
+                            style="display: inline-block; white-space: nowrap; max-width: fit-content;">
+                            Cucumber
                         </a>
+                        <p class="card-text">
+                            Contents:{{"#"}} <br>
+                            Lorem aaa aaa ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, perferendis.</p>
+                        <h5 class="card-text text-end">$3.00</h5>
                     </div>
-                    <p class="card-text small mb-1" style="word-break: break-word;">
-                        Contents: {{ "#" }} <br>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero eaque nesciunt praesentium laboriosam amet quisquam aliquid cum excepturi ab non.
-                    </p>                
-                    <h5 class="card-text text-end mb-0">$3.00</h5>
-                </div>
-                <div class="card-footer py-1 bg-light mt-0">
-                    <a href="#" class="text-decoration-none text-dark">
+                </a>
+                <div class="card-footer py-1">
+                    <a href="{{route('farmProfile')}}" class="text-decoration-none text-dark">
                         <div class="d-flex align-items-center">
-                            <img src="/storage/images/topbanner.jpg" 
-                                alt="Farm Image" 
-                                class="img-thumbnail rounded-circle" 
-                                style="width: 35px; height: 35px; object-fit: cover;"> <!-- サムネイルサイズ調整 -->
-                            <div class="ms-2">
-                                <p class="mb-0 small">Farm Name</p> <!-- フォントサイズ調整 -->
+                            <img src="/storage/images/topbanner.jpg" alt="Farm Image" class="img-thumbnail rounded-circle" style="width: 40px; height: 40px; object-fit: cover;">
+                            <div class="ms-3">
+                                <p class="mb-0">Farm Name</p>
                             </div>
                         </div>
                     </a>
                 </div>
             </div>
         </div>
-        <div class="col-md-2 col-sm-4 col-6">
-            <div class="card shadow-sm border-1">
-                <!-- Image -->
-                                <div class="position-relative">
-                    <img src="/storage/images/banana.jpg" 
-                        class="card-img-top" 
-                        alt="Item Image" 
-                        style="object-fit: cover; height: 100px;">
-                    <div class="position-absolute top-0 start-0 px-2 text-white bg-danger opacity-50 " style="font-size: 0.78rem;">
-                        10 Favorites
+        <div class="col-3">
+            <div class="card h-100 shadow-lg border-1">
+                <a href="{{route('showItem')}}" class=" text-decoration-none text-dark">
+                    <div class="position-relative">
+                        <img src="/storage/images/banana.jpg" 
+                            class="card-img-top" 
+                            alt="Item Image" 
+                            style="object-fit: cover;">
+                        <div class="position-absolute top-0 start-0 px-2 text-white bg-danger opacity-50 " style="font-size: 0.8rem;">
+                            10 Favorites
+                        </div>
                     </div>
-                </div>
-
-                <div class="card-body d-flex flex-column px-2pb-0">
-                    <div class="d-flex justify-content-between align-items-center mb-1">
-                        <a href="#" class="card-title mb-0 h5 text-decoration-none">Item Title</a>
-                        <button type="submit" class="btn btn-sm shadow-none p-0">
-                            <i class="fa-regular fa-heart fs-5"></i>
-                        </button>
-                    </div>
-                    <div class="">
-                        <a href="#" class="badge text-bg-success text-decoration-none rounded-pill mb-1" 
-                        style="display: inline-block; white-space: nowrap;">
-                        Cucumber
+                    <div class="card-body d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <p class="card-title mb-0 h5">Item Title</p>
+                            <button type="submit" class="btn btn-sm shadow-none p-0">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <a href="#" class="badge text-bg-success text-decoration-none mb-2" 
+                            style="display: inline-block; white-space: nowrap; max-width: fit-content;">
+                            Cucumber
                         </a>
+                        <p class="card-text">
+                            Contents:{{"#"}} <br>
+                            Lorem aaa aaa ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, perferendis.</p>
+                        <h5 class="card-text text-end">$3.00</h5>
                     </div>
-                    <p class="card-text small mb-1" style="word-break: break-word;">
-                        Contents: {{ "#" }} <br>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero eaque nesciunt praesentium laboriosam amet quisquam aliquid cum excepturi ab non.
-                    </p>                
-                    <h5 class="card-text text-end mb-0">$3.00</h5>
-                </div>
-                <div class="card-footer py-1 bg-light mt-0">
-                    <a href="#" class="text-decoration-none text-dark">
+                </a>
+                <div class="card-footer py-1">
+                    <a href="{{route('farmProfile')}}" class="text-decoration-none text-dark">
                         <div class="d-flex align-items-center">
-                            <img src="/storage/images/topbanner.jpg" 
-                                alt="Farm Image" 
-                                class="img-thumbnail rounded-circle" 
-                                style="width: 35px; height: 35px; object-fit: cover;"> <!-- サムネイルサイズ調整 -->
-                            <div class="ms-2">
-                                <p class="mb-0 small">Farm Name</p> <!-- フォントサイズ調整 -->
+                            <img src="/storage/images/topbanner.jpg" alt="Farm Image" class="img-thumbnail rounded-circle" style="width: 40px; height: 40px; object-fit: cover;">
+                            <div class="ms-3">
+                                <p class="mb-0">Farm Name</p>
                             </div>
                         </div>
                     </a>
                 </div>
             </div>
         </div>
-        <div class="col-md-2 col-sm-4 col-6">
-            <div class="card shadow-sm border-1">
-                <!-- Image -->
-                                <div class="position-relative">
-                    <img src="/storage/images/banana.jpg" 
-                        class="card-img-top" 
-                        alt="Item Image" 
-                        style="object-fit: cover; height: 100px;">
-                    <div class="position-absolute top-0 start-0 px-2 text-white bg-danger opacity-50 " style="font-size: 0.78rem;">
-                        10 Favorites
+        <div class="col-3">
+            <div class="card h-100 shadow-lg border-1">
+                <a href="{{route('showItem')}}" class=" text-decoration-none text-dark">
+                    <div class="position-relative">
+                        <img src="/storage/images/banana.jpg" 
+                            class="card-img-top" 
+                            alt="Item Image" 
+                            style="object-fit: cover;">
+                        <div class="position-absolute top-0 start-0 px-2 text-white bg-danger opacity-50 " style="font-size: 0.8rem;">
+                            10 Favorites
+                        </div>
                     </div>
-                </div>
-
-                <div class="card-body d-flex flex-column px-2pb-0">
-                    <div class="d-flex justify-content-between align-items-center mb-1">
-                        <a href="#" class="card-title mb-0 h5 text-decoration-none">Item Title</a>
-                        <button type="submit" class="btn btn-sm shadow-none p-0">
-                            <i class="fa-regular fa-heart fs-5"></i>
-                        </button>
-                    </div>
-                    <div class="">
-                        <a href="#" class="badge text-bg-success text-decoration-none rounded-pill mb-1" 
-                        style="display: inline-block; white-space: nowrap;">
-                        Cucumber
+                    <div class="card-body d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <p class="card-title mb-0 h5">Item Title</p>
+                            <button type="submit" class="btn btn-sm shadow-none p-0">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <a href="#" class="badge text-bg-success text-decoration-none mb-2" 
+                            style="display: inline-block; white-space: nowrap; max-width: fit-content;">
+                            Cucumber
                         </a>
+                        <p class="card-text">
+                            Contents:{{"#"}} <br>
+                            Lorem aaa aaa ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, perferendis.</p>
+                        <h5 class="card-text text-end">$3.00</h5>
                     </div>
-                    <p class="card-text small mb-1" style="word-break: break-word;">
-                        Contents: {{ "#" }} <br>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero eaque nesciunt praesentium laboriosam amet quisquam aliquid cum excepturi ab non.
-                    </p>                
-                    <h5 class="card-text text-end mb-0">$3.00</h5>
-                </div>
-                <div class="card-footer py-1 bg-light mt-0">
-                    <a href="#" class="text-decoration-none text-dark">
+                </a>
+                <div class="card-footer py-1">
+                    <a href="{{route('farmProfile')}}" class="text-decoration-none text-dark">
                         <div class="d-flex align-items-center">
-                            <img src="/storage/images/topbanner.jpg" 
-                                alt="Farm Image" 
-                                class="img-thumbnail rounded-circle" 
-                                style="width: 35px; height: 35px; object-fit: cover;"> <!-- サムネイルサイズ調整 -->
-                            <div class="ms-2">
-                                <p class="mb-0 small">Farm Name</p> <!-- フォントサイズ調整 -->
+                            <img src="/storage/images/topbanner.jpg" alt="Farm Image" class="img-thumbnail rounded-circle" style="width: 40px; height: 40px; object-fit: cover;">
+                            <div class="ms-3">
+                                <p class="mb-0">Farm Name</p>
                             </div>
                         </div>
                     </a>
                 </div>
             </div>
         </div>
-        <div class="col-md-2 col-sm-4 col-6">
-            <div class="card shadow-sm border-1">
-                <!-- Image -->
-                                <div class="position-relative">
-                    <img src="/storage/images/banana.jpg" 
-                        class="card-img-top" 
-                        alt="Item Image" 
-                        style="object-fit: cover; height: 100px;">
-                    <div class="position-absolute top-0 start-0 px-2 text-white bg-danger opacity-50 " style="font-size: 0.78rem;">
-                        10 Favorites
+        <div class="col-3">
+            <div class="card h-100 shadow-lg border-1">
+                <a href="{{route('showItem')}}" class=" text-decoration-none text-dark">
+                    <div class="position-relative">
+                        <img src="/storage/images/banana.jpg" 
+                            class="card-img-top" 
+                            alt="Item Image" 
+                            style="object-fit: cover;">
+                        <div class="position-absolute top-0 start-0 px-2 text-white bg-danger opacity-50 " style="font-size: 0.8rem;">
+                            10 Favorites
+                        </div>
                     </div>
-                </div>
-
-                <div class="card-body d-flex flex-column px-2pb-0">
-                    <div class="d-flex justify-content-between align-items-center mb-1">
-                        <a href="#" class="card-title mb-0 h5 text-decoration-none">Item Title</a>
-                        <button type="submit" class="btn btn-sm shadow-none p-0">
-                            <i class="fa-regular fa-heart fs-5"></i>
-                        </button>
-                    </div>
-                    <div class="">
-                        <a href="#" class="badge text-bg-success text-decoration-none rounded-pill mb-1" 
-                        style="display: inline-block; white-space: nowrap;">
-                        Cucumber
+                    <div class="card-body d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <p class="card-title mb-0 h5">Item Title</p>
+                            <button type="submit" class="btn btn-sm shadow-none p-0">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <a href="#" class="badge text-bg-success text-decoration-none mb-2" 
+                            style="display: inline-block; white-space: nowrap; max-width: fit-content;">
+                            Cucumber
                         </a>
+                        <p class="card-text">
+                            Contents:{{"#"}} <br>
+                            Lorem aaa aaa ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, perferendis.</p>
+                        <h5 class="card-text text-end">$3.00</h5>
                     </div>
-                    <p class="card-text small mb-1" style="word-break: break-word;">
-                        Contents: {{ "#" }} <br>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero eaque nesciunt praesentium laboriosam amet quisquam aliquid cum excepturi ab non.
-                    </p>                
-                    <h5 class="card-text text-end mb-0">$3.00</h5>
-                </div>
-                <div class="card-footer py-1 bg-light mt-0">
-                    <a href="#" class="text-decoration-none text-dark">
+                </a>
+                <div class="card-footer py-1">
+                    <a href="{{route('farmProfile')}}" class="text-decoration-none text-dark">
                         <div class="d-flex align-items-center">
-                            <img src="/storage/images/topbanner.jpg" 
-                                alt="Farm Image" 
-                                class="img-thumbnail rounded-circle" 
-                                style="width: 35px; height: 35px; object-fit: cover;"> <!-- サムネイルサイズ調整 -->
-                            <div class="ms-2">
-                                <p class="mb-0 small">Farm Name</p> <!-- フォントサイズ調整 -->
+                            <img src="/storage/images/topbanner.jpg" alt="Farm Image" class="img-thumbnail rounded-circle" style="width: 40px; height: 40px; object-fit: cover;">
+                            <div class="ms-3">
+                                <p class="mb-0">Farm Name</p>
                             </div>
                         </div>
                     </a>
                 </div>
             </div>
         </div>
-        <div class="col-md-2 col-sm-4 col-6">
-            <div class="card shadow-sm border-1">
-                <!-- Image -->
-                                <div class="position-relative">
-                    <img src="/storage/images/banana.jpg" 
-                        class="card-img-top" 
-                        alt="Item Image" 
-                        style="object-fit: cover; height: 100px;">
-                    <div class="position-absolute top-0 start-0 px-2 text-white bg-danger opacity-50 " style="font-size: 0.78rem;">
-                        10 Favorites
+        <div class="col-3">
+            <div class="card h-100 shadow-lg border-1">
+                <a href="{{route('showItem')}}" class=" text-decoration-none text-dark">
+                    <div class="position-relative">
+                        <img src="/storage/images/banana.jpg" 
+                            class="card-img-top" 
+                            alt="Item Image" 
+                            style="object-fit: cover;">
+                        <div class="position-absolute top-0 start-0 px-2 text-white bg-danger opacity-50 " style="font-size: 0.8rem;">
+                            10 Favorites
+                        </div>
                     </div>
-                </div>
-
-                <div class="card-body d-flex flex-column px-2pb-0">
-                    <div class="d-flex justify-content-between align-items-center mb-1">
-                        <a href="#" class="card-title mb-0 h5 text-decoration-none">Item Title</a>
-                        <button type="submit" class="btn btn-sm shadow-none p-0">
-                            <i class="fa-regular fa-heart fs-5"></i>
-                        </button>
-                    </div>
-                    <div class="">
-                        <a href="#" class="badge text-bg-success text-decoration-none rounded-pill mb-1" 
-                        style="display: inline-block; white-space: nowrap;">
-                        Cucumber
+                    <div class="card-body d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <p class="card-title mb-0 h5">Item Title</p>
+                            <button type="submit" class="btn btn-sm shadow-none p-0">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <a href="#" class="badge text-bg-success text-decoration-none mb-2" 
+                            style="display: inline-block; white-space: nowrap; max-width: fit-content;">
+                            Cucumber
                         </a>
+                        <p class="card-text">
+                            Contents:{{"#"}} <br>
+                            Lorem aaa aaa ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, perferendis.</p>
+                        <h5 class="card-text text-end">$3.00</h5>
                     </div>
-                    <p class="card-text small mb-1" style="word-break: break-word;">
-                        Contents: {{ "#" }} <br>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero eaque nesciunt praesentium laboriosam amet quisquam aliquid cum excepturi ab non.
-                    </p>                
-                    <h5 class="card-text text-end mb-0">$3.00</h5>
-                </div>
-                <div class="card-footer py-1 bg-light mt-0">
-                    <a href="#" class="text-decoration-none text-dark">
+                </a>
+                <div class="card-footer py-1">
+                    <a href="{{route('farmProfile')}}" class="text-decoration-none text-dark">
                         <div class="d-flex align-items-center">
-                            <img src="/storage/images/topbanner.jpg" 
-                                alt="Farm Image" 
-                                class="img-thumbnail rounded-circle" 
-                                style="width: 35px; height: 35px; object-fit: cover;"> <!-- サムネイルサイズ調整 -->
-                            <div class="ms-2">
-                                <p class="mb-0 small">Farm Name</p> <!-- フォントサイズ調整 -->
+                            <img src="/storage/images/topbanner.jpg" alt="Farm Image" class="img-thumbnail rounded-circle" style="width: 40px; height: 40px; object-fit: cover;">
+                            <div class="ms-3">
+                                <p class="mb-0">Farm Name</p>
                             </div>
                         </div>
                     </a>
                 </div>
             </div>
         </div>
-        <div class="col-md-2 col-sm-4 col-6">
-            <div class="card shadow-sm border-1">
-                <!-- Image -->
-                                <div class="position-relative">
-                    <img src="/storage/images/banana.jpg" 
-                        class="card-img-top" 
-                        alt="Item Image" 
-                        style="object-fit: cover; height: 100px;">
-                    <div class="position-absolute top-0 start-0 px-2 text-white bg-danger opacity-50 " style="font-size: 0.78rem;">
-                        10 Favorites
+        <div class="col-3">
+            <div class="card h-100 shadow-lg border-1">
+                <a href="{{route('showItem')}}" class=" text-decoration-none text-dark">
+                    <div class="position-relative">
+                        <img src="/storage/images/banana.jpg" 
+                            class="card-img-top" 
+                            alt="Item Image" 
+                            style="object-fit: cover;">
+                        <div class="position-absolute top-0 start-0 px-2 text-white bg-danger opacity-50 " style="font-size: 0.8rem;">
+                            10 Favorites
+                        </div>
                     </div>
-                </div>
-
-                <div class="card-body d-flex flex-column px-2pb-0">
-                    <div class="d-flex justify-content-between align-items-center mb-1">
-                        <a href="#" class="card-title mb-0 h5 text-decoration-none">Item Title</a>
-                        <button type="submit" class="btn btn-sm shadow-none p-0">
-                            <i class="fa-regular fa-heart fs-5"></i>
-                        </button>
-                    </div>
-                    <div class="">
-                        <a href="#" class="badge text-bg-success text-decoration-none rounded-pill mb-1" 
-                        style="display: inline-block; white-space: nowrap;">
-                        Cucumber
+                    <div class="card-body d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <p class="card-title mb-0 h5">Item Title</p>
+                            <button type="submit" class="btn btn-sm shadow-none p-0">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <a href="#" class="badge text-bg-success text-decoration-none mb-2" 
+                            style="display: inline-block; white-space: nowrap; max-width: fit-content;">
+                            Cucumber
                         </a>
+                        <p class="card-text">
+                            Contents:{{"#"}} <br>
+                            Lorem aaa aaa ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, perferendis.</p>
+                        <h5 class="card-text text-end">$3.00</h5>
                     </div>
-                    <p class="card-text small mb-1" style="word-break: break-word;">
-                        Contents: {{ "#" }} <br>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero eaque nesciunt praesentium laboriosam amet quisquam aliquid cum excepturi ab non.
-                    </p>                
-                    <h5 class="card-text text-end mb-0">$3.00</h5>
-                </div>
-                <div class="card-footer py-1 bg-light mt-0">
-                    <a href="#" class="text-decoration-none text-dark">
+                </a>
+                <div class="card-footer py-1">
+                    <a href="{{route('farmProfile')}}" class="text-decoration-none text-dark">
                         <div class="d-flex align-items-center">
-                            <img src="/storage/images/topbanner.jpg" 
-                                alt="Farm Image" 
-                                class="img-thumbnail rounded-circle" 
-                                style="width: 35px; height: 35px; object-fit: cover;"> <!-- サムネイルサイズ調整 -->
-                            <div class="ms-2">
-                                <p class="mb-0 small">Farm Name</p> <!-- フォントサイズ調整 -->
+                            <img src="/storage/images/topbanner.jpg" alt="Farm Image" class="img-thumbnail rounded-circle" style="width: 40px; height: 40px; object-fit: cover;">
+                            <div class="ms-3">
+                                <p class="mb-0">Farm Name</p>
                             </div>
                         </div>
                     </a>
                 </div>
             </div>
         </div>
-        <div class="col-md-2 col-sm-4 col-6">
-            <div class="card shadow-sm border-1">
-                <!-- Image -->
-                                <div class="position-relative">
-                    <img src="/storage/images/banana.jpg" 
-                        class="card-img-top" 
-                        alt="Item Image" 
-                        style="object-fit: cover; height: 100px;">
-                    <div class="position-absolute top-0 start-0 px-2 text-white bg-danger opacity-50 " style="font-size: 0.78rem;">
-                        10 Favorites
-                    </div>
-                </div>
-
-                <div class="card-body d-flex flex-column px-2pb-0">
-                    <div class="d-flex justify-content-between align-items-center mb-1">
-                        <a href="#" class="card-title mb-0 h5 text-decoration-none">Item Title</a>
-                        <button type="submit" class="btn btn-sm shadow-none p-0">
-                            <i class="fa-regular fa-heart fs-5"></i>
-                        </button>
-                    </div>
-                    <div class="">
-                        <a href="#" class="badge text-bg-success text-decoration-none rounded-pill mb-1" 
-                        style="display: inline-block; white-space: nowrap;">
-                        Cucumber
-                        </a>
-                    </div>
-                    <p class="card-text small mb-1" style="word-break: break-word;">
-                        Contents: {{ "#" }} <br>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero eaque nesciunt praesentium laboriosam amet quisquam aliquid cum excepturi ab non.
-                    </p>                
-                    <h5 class="card-text text-end mb-0">$3.00</h5>
-                </div>
-                <div class="card-footer py-1 bg-light mt-0">
-                    <a href="#" class="text-decoration-none text-dark">
-                        <div class="d-flex align-items-center">
-                            <img src="/storage/images/topbanner.jpg" 
-                                alt="Farm Image" 
-                                class="img-thumbnail rounded-circle" 
-                                style="width: 35px; height: 35px; object-fit: cover;"> <!-- サムネイルサイズ調整 -->
-                            <div class="ms-2">
-                                <p class="mb-0 small">Farm Name</p> <!-- フォントサイズ調整 -->
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-2 col-sm-4 col-6">
-            <div class="card shadow-sm border-1">
-                <!-- Image -->
-                                <div class="position-relative">
-                    <img src="/storage/images/banana.jpg" 
-                        class="card-img-top" 
-                        alt="Item Image" 
-                        style="object-fit: cover; height: 100px;">
-                    <div class="position-absolute top-0 start-0 px-2 text-white bg-danger opacity-50 " style="font-size: 0.78rem;">
-                        10 Favorites
-                    </div>
-                </div>
-
-                <div class="card-body d-flex flex-column px-2pb-0">
-                    <div class="d-flex justify-content-between align-items-center mb-1">
-                        <a href="#" class="card-title mb-0 h5 text-decoration-none">Item Title</a>
-                        <button type="submit" class="btn btn-sm shadow-none p-0">
-                            <i class="fa-regular fa-heart fs-5"></i>
-                        </button>
-                    </div>
-                    <div class="">
-                        <a href="#" class="badge text-bg-success text-decoration-none rounded-pill mb-1" 
-                        style="display: inline-block; white-space: nowrap;">
-                        Cucumber
-                        </a>
-                    </div>
-                    <p class="card-text small mb-1" style="word-break: break-word;">
-                        Contents: {{ "#" }} <br>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero eaque nesciunt praesentium laboriosam amet quisquam aliquid cum excepturi ab non.
-                    </p>                
-                    <h5 class="card-text text-end mb-0">$3.00</h5>
-                </div>
-                <div class="card-footer py-1 bg-light mt-0">
-                    <a href="#" class="text-decoration-none text-dark">
-                        <div class="d-flex align-items-center">
-                            <img src="/storage/images/topbanner.jpg" 
-                                alt="Farm Image" 
-                                class="img-thumbnail rounded-circle" 
-                                style="width: 35px; height: 35px; object-fit: cover;"> <!-- サムネイルサイズ調整 -->
-                            <div class="ms-2">
-                                <p class="mb-0 small">Farm Name</p> <!-- フォントサイズ調整 -->
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-2 col-sm-4 col-6">
-            <div class="card shadow-sm border-1">
-                <!-- Image -->
-                                <div class="position-relative">
-                    <img src="/storage/images/banana.jpg" 
-                        class="card-img-top" 
-                        alt="Item Image" 
-                        style="object-fit: cover; height: 100px;">
-                    <div class="position-absolute top-0 start-0 px-2 text-white bg-danger opacity-50 " style="font-size: 0.78rem;">
-                        10 Favorites
-                    </div>
-                </div>
-
-                <div class="card-body d-flex flex-column px-2pb-0">
-                    <div class="d-flex justify-content-between align-items-center mb-1">
-                        <a href="#" class="card-title mb-0 h5 text-decoration-none">Item Title</a>
-                        <button type="submit" class="btn btn-sm shadow-none p-0">
-                            <i class="fa-regular fa-heart fs-5"></i>
-                        </button>
-                    </div>
-                    <div class="">
-                        <a href="#" class="badge text-bg-success text-decoration-none rounded-pill mb-1" 
-                        style="display: inline-block; white-space: nowrap;">
-                        Cucumber
-                        </a>
-                    </div>
-                    <p class="card-text small mb-1" style="word-break: break-word;">
-                        Contents: {{ "#" }} <br>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero eaque nesciunt praesentium laboriosam amet quisquam aliquid cum excepturi ab non.
-                    </p>                
-                    <h5 class="card-text text-end mb-0">$3.00</h5>
-                </div>
-                <div class="card-footer py-1 bg-light mt-0">
-                    <a href="#" class="text-decoration-none text-dark">
-                        <div class="d-flex align-items-center">
-                            <img src="/storage/images/topbanner.jpg" 
-                                alt="Farm Image" 
-                                class="img-thumbnail rounded-circle" 
-                                style="width: 35px; height: 35px; object-fit: cover;"> <!-- サムネイルサイズ調整 -->
-                            <div class="ms-2">
-                                <p class="mb-0 small">Farm Name</p> <!-- フォントサイズ調整 -->
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-2 col-sm-4 col-6">
-            <div class="card shadow-sm border-1">
-                <!-- Image -->
-                                <div class="position-relative">
-                    <img src="/storage/images/banana.jpg" 
-                        class="card-img-top" 
-                        alt="Item Image" 
-                        style="object-fit: cover; height: 100px;">
-                    <div class="position-absolute top-0 start-0 px-2 text-white bg-danger opacity-50 " style="font-size: 0.78rem;">
-                        10 Favorites
-                    </div>
-                </div>
-
-                <div class="card-body d-flex flex-column px-2pb-0">
-                    <div class="d-flex justify-content-between align-items-center mb-1">
-                        <a href="#" class="card-title mb-0 h5 text-decoration-none">Item Title</a>
-                        <button type="submit" class="btn btn-sm shadow-none p-0">
-                            <i class="fa-regular fa-heart fs-5"></i>
-                        </button>
-                    </div>
-                    <div class="">
-                        <a href="#" class="badge text-bg-success text-decoration-none rounded-pill mb-1" 
-                        style="display: inline-block; white-space: nowrap;">
-                        Cucumber
-                        </a>
-                    </div>
-                    <p class="card-text small mb-1" style="word-break: break-word;">
-                        Contents: {{ "#" }} <br>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero eaque nesciunt praesentium laboriosam amet quisquam aliquid cum excepturi ab non.
-                    </p>                
-                    <h5 class="card-text text-end mb-0">$3.00</h5>
-                </div>
-                <div class="card-footer py-1 bg-light mt-0">
-                    <a href="#" class="text-decoration-none text-dark">
-                        <div class="d-flex align-items-center">
-                            <img src="/storage/images/topbanner.jpg" 
-                                alt="Farm Image" 
-                                class="img-thumbnail rounded-circle" 
-                                style="width: 35px; height: 35px; object-fit: cover;"> <!-- サムネイルサイズ調整 -->
-                            <div class="ms-2">
-                                <p class="mb-0 small">Farm Name</p> <!-- フォントサイズ調整 -->
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-2 col-sm-4 col-6">
-            <div class="card shadow-sm border-1">
-                <!-- Image -->
-                                <div class="position-relative">
-                    <img src="/storage/images/banana.jpg" 
-                        class="card-img-top" 
-                        alt="Item Image" 
-                        style="object-fit: cover; height: 100px;">
-                    <div class="position-absolute top-0 start-0 px-2 text-white bg-danger opacity-50 " style="font-size: 0.78rem;">
-                        10 Favorites
-                    </div>
-                </div>
-
-                <div class="card-body d-flex flex-column px-2pb-0">
-                    <div class="d-flex justify-content-between align-items-center mb-1">
-                        <a href="#" class="card-title mb-0 h5 text-decoration-none">Item Title</a>
-                        <button type="submit" class="btn btn-sm shadow-none p-0">
-                            <i class="fa-regular fa-heart fs-5"></i>
-                        </button>
-                    </div>
-                    <div class="">
-                        <a href="#" class="badge text-bg-success text-decoration-none rounded-pill mb-1" 
-                        style="display: inline-block; white-space: nowrap;">
-                        Cucumber
-                        </a>
-                    </div>
-                    <p class="card-text small mb-1" style="word-break: break-word;">
-                        Contents: {{ "#" }} <br>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero eaque nesciunt praesentium laboriosam amet quisquam aliquid cum excepturi ab non.
-                    </p>                
-                    <h5 class="card-text text-end mb-0">$3.00</h5>
-                </div>
-                <div class="card-footer py-1 bg-light mt-0">
-                    <a href="#" class="text-decoration-none text-dark">
-                        <div class="d-flex align-items-center">
-                            <img src="/storage/images/topbanner.jpg" 
-                                alt="Farm Image" 
-                                class="img-thumbnail rounded-circle" 
-                                style="width: 35px; height: 35px; object-fit: cover;"> <!-- サムネイルサイズ調整 -->
-                            <div class="ms-2">
-                                <p class="mb-0 small">Farm Name</p> <!-- フォントサイズ調整 -->
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-2 col-sm-4 col-6">
-            <div class="card shadow-sm border-1">
-                <!-- Image -->
-                                <div class="position-relative">
-                    <img src="/storage/images/banana.jpg" 
-                        class="card-img-top" 
-                        alt="Item Image" 
-                        style="object-fit: cover; height: 100px;">
-                    <div class="position-absolute top-0 start-0 px-2 text-white bg-danger opacity-50 " style="font-size: 0.78rem;">
-                        10 Favorites
-                    </div>
-                </div>
-
-                <div class="card-body d-flex flex-column px-2pb-0">
-                    <div class="d-flex justify-content-between align-items-center mb-1">
-                        <a href="#" class="card-title mb-0 h5 text-decoration-none">Item Title</a>
-                        <button type="submit" class="btn btn-sm shadow-none p-0">
-                            <i class="fa-regular fa-heart fs-5"></i>
-                        </button>
-                    </div>
-                    <div class="">
-                        <a href="#" class="badge text-bg-success text-decoration-none rounded-pill mb-1" 
-                        style="display: inline-block; white-space: nowrap;">
-                        Cucumber
-                        </a>
-                    </div>
-                    <p class="card-text small mb-1" style="word-break: break-word;">
-                        Contents: {{ "#" }} <br>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero eaque nesciunt praesentium laboriosam amet quisquam aliquid cum excepturi ab non.
-                    </p>                
-                    <h5 class="card-text text-end mb-0">$3.00</h5>
-                </div>
-                <div class="card-footer py-1 bg-light mt-0">
-                    <a href="#" class="text-decoration-none text-dark">
-                        <div class="d-flex align-items-center">
-                            <img src="/storage/images/topbanner.jpg" 
-                                alt="Farm Image" 
-                                class="img-thumbnail rounded-circle" 
-                                style="width: 35px; height: 35px; object-fit: cover;"> <!-- サムネイルサイズ調整 -->
-                            <div class="ms-2">
-                                <p class="mb-0 small">Farm Name</p> <!-- フォントサイズ調整 -->
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
+        
     </div>
 
     {{-- Pagination --}}
