@@ -12,7 +12,7 @@
                 </div>
                 <div class="row mb-3">
                     <div class="col-auto">
-                        <h1 class="display-4 mb-0">John Doe</h1>
+                        <h1 class="display-4 mb-0">{{ Auth::user()->name }}</h1>
                     </div>
                 </div>
             </div>
@@ -167,4 +167,26 @@
             <canvas id="annualNumberOfUsersChart"></canvas>
         </div>
     </div>
+
+    @push('scripts')
+    <script>
+        const data = {
+            labels: ['Jan', 'Feb', 'March', 'April', 'May', 'June','July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'],
+            
+            datasets: [{
+                label: 'Annual Numbers of User',
+                data: @json($userMonthlyCounts),
+            }]
+        };
+        const config = {
+            type: 'bar',
+            data: data
+        };
+        
+        new Chart(
+            document.getElementById('annualNumberOfUsersChart'),
+            config
+        );
+    </script>
+    @endpush
 @endsection

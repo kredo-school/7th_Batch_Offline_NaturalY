@@ -3,13 +3,33 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class AdminHomeController extends Controller
 {
     public function index()
     {
-        return view('admin.index');
+        $data = User::selectRaw("MONTH(created_at) as month, count(*) as aggregate")
+            ->whereYear('created_at', date('Y'))
+            ->groupBy('month')
+            ->get()
+            ->keyBy('month')
+            ->toArray();
+
+        $result = array_fill(1, 12, 0);
+
+        foreach ($data as $month => $row) {
+            $result[$month] = $row['aggregate'];
+        }
+                
+        $userMonthlyCounts = [];
+
+        foreach ($result as $key => $value) {
+            $userMonthlyCounts[] = $value;
+        }
+                
+        return view('admin.index', compact('userMonthlyCounts'));
     }
 
     public function consumerManagement()

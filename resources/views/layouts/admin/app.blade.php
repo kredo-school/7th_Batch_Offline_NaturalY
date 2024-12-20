@@ -190,7 +190,7 @@
                                     <div class="row text-center">
                                         {{-- Consumer Management --}}
                                         <div class="col-6 d-flex flex-column align-items-center">
-                                            <a class="dropdown-item p-0" href="#">
+                                            <a href="{{ route('admin.consumer.management') }}" class="dropdown-item p-0">
                                                 <svg width="56" height="55" viewBox="0 0 56 55" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <g clip-path="url(#clip0_374_3574)">
                                                     <g filter="url(#filter0_d_374_3574)">
@@ -231,7 +231,7 @@
                                         </div>
                                         {{-- Farm Management --}}
                                         <div class="col-6 d-flex flex-column align-items-center">
-                                            <a class="dropdown-item p-0" href="#">
+                                            <a href="{{ route('admin.farm.management') }}" class="dropdown-item p-0">
                                                 <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <g clip-path="url(#clip0_374_3578)">
                                                     <g filter="url(#filter0_d_374_3578)">
@@ -262,14 +262,14 @@
                                     <div class="row text-center mt-3">
                                         {{-- Item Management --}}
                                         <div class="col-6 d-flex flex-column align-items-center">
-                                            <a class="dropdown-item p-0" href="#">
+                                            <a href="{{ route('admin.item.management') }}" class="dropdown-item p-0">
                                                 <i class="fa-regular fa-lemon icon-sm text-warning"></i>
                                                 <p class="text-secondary mt-1 mb-0">Item <br> Management</p>
                                             </a>
                                         </div>
                                         {{-- Analysis --}}
                                         <div class="col-6 d-flex flex-column align-items-center">
-                                            <a class="dropdown-item p-0" href="#">
+                                            <a href="{{ route('admin.analysis') }}" class="dropdown-item p-0">
                                                 <i class="fa-solid fa-chart-line icon-sm text-danger"></i>
                                                 <p class="text-secondary mt-1 mb-0">Analysis</p>
                                             </a>
@@ -329,7 +329,8 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="{{ asset('js/chart/number-of-user.js') }}"></script>
+    @stack('scripts')
+
     <script src="{{ asset('js/chart/number-of-customers-and-farmers.js') }}"></script>
     <script src="{{ asset('js/chart/number-of-purchase.js') }}"></script>
     <script src="{{ asset('js/chart/number-of-sales.js') }}"></script>
