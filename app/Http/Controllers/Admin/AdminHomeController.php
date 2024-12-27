@@ -32,14 +32,26 @@ class AdminHomeController extends Controller
         return view('admin.index', compact('userMonthlyCounts'));
     }
 
-    public function consumerManagement()
+    public function consumerManagement($status = '')
     {
-        return view('admin.consumer-management');
+        if ($status == 'active') {
+            $consumers = User::whereRoleId(User::CONSUMER_ROLE)->paginate(10);
+        } elseif ($status == 'inactive') {
+            $consumers = User::whereRoleId(User::CONSUMER_ROLE)->onlyTrashed()->paginate(10);
+        } else {
+            $consumers = User::whereRoleId(User::CONSUMER_ROLE)->withTrashed()->paginate(10);
+        }
+
+        return view('admin.consumer-management')
+                ->with('consumers', $consumers);
     }
 
-    public function consumerProfile()
+    public function consumerProfile($id)
     {
-        return view('admin.consumer-profile');
+        $user = User::withTrashed()->findOrFail($id);
+
+        return view('admin.consumer-profile')
+                ->with('consumer', $user);
     }
 
     public function farmManagement()
@@ -65,5 +77,34 @@ class AdminHomeController extends Controller
     public function analysis()
     {
         return view('admin.analysis');
+    }
+
+    public function consumerDeactivate(User $user)
+    {
+        $user->delete();
+
+        return redirect()->route('admin.consumer.management');
+    }
+
+    public function consumerActivate(User $user)
+    {
+        $user->restore();
+
+        return redirect()->route('admin.consumer.management');
+    }
+
+    public function consumerSearch(Request $request){
+        $request->validate([
+            'search' => 'required'
+        ]);
+
+        $search = $request->search;
+
+        $consumers = User::where('name','like', '%'. $search .'%')
+                        ->whereRoleId(User::CONSUMER_ROLE)
+                        ->withTrashed()
+                        ->paginate(10);
+        
+        return view('admin.consumer-search', compact('consumers', 'search'));
     }
 }

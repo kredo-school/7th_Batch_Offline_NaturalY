@@ -4,21 +4,23 @@
     <div class="mx-5 mt-5 mb-3">
         <h1 class="fw-bold text-center">CONSUMER MANAGEMENT</h1>
     </div>
-    <div class="mx-5">
+    <div class="mx-5 mb-3">
         <form action="{{ route('admin.consumer.search') }}">
                 @csrf
             <div class="input-group mb-3">
                 <span class="input-group-text" id="search">Search User</span>
 
-                <input type="text" name="search" class="form-control" value="{{ old('search') }}">
+                <input type="text" name="search" class="form-control" value="{{ old('search', $search) }}">
                 <button type="submit" class="btn btn-primary">Search</button>
             </div>
         </form>
+        @error('search')
+            <div class="text-danger">{{ $message }}</div>
+        @enderror
     </div>
+
     <div class="mx-5 mb-3">
-        <a href="{{ route('admin.consumer.management') }}" class="btn btn-light rounded-5 px-4">All</a>
-        <a href="{{ route('admin.consumer.management', 'active') }}" class="btn btn-danger rounded-5 px-4">Active</a>
-        <a href="{{ route('admin.consumer.management', 'inactive') }}" class="btn btn-secondary rounded-5 px-4">Inactive</a>
+        <p class="h5 text-muted mb-4">Search results for "<span class="fw-bold">{{ $search }}</span>"</p>
     </div>
     <div class="mx-5 mb-3">
         @forelse ($consumers as $consumer)
@@ -57,7 +59,7 @@
                 </div>
             </a>
         @empty
-            <h2 class="text-center">No Consumers Yet.</h2>
+            <h2 class="text-center">No consumers found.</h2>
         @endforelse
 
         <div class="justify-content-center d-flex">
