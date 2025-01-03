@@ -31,27 +31,16 @@
     </form>
 
     {{-- Farm Card --}}
-    <div class="row g-3">
+    <div class="row g-3 mt-3">
         @foreach ($farms as $farm)
-            @for ($i = 0; $i < 16; $i++)
-                @include('partials.farm-card', ['farm' => $farm])
-            @endfor
+            @include('partials.farm-card', ['farm' => $farm])
         @endforeach
     </div>
 
     {{-- Pagination --}}
-    <nav aria-label="Page navigation" class="mt-3">
-        <ul class="pagination justify-content-center">
-        <li class="page-item disabled">
-            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-        </li>
-        <li class="page-item"><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item">
-            <a class="page-link" href="#">Next</a>
-        </li>
-        </ul>
-    </nav>
+    <div class="d-flex justify-content-center mt-3">
+        {{ $farms->links('pagination::bootstrap-4') }}
+    </div>
+
 </div>
 @endsection

@@ -9,7 +9,7 @@
 
 <div class="container">
     
-    <a href="{{route('farm.itemList')}}" class="w-100 btn btn-success mt-5 py-5 fs-2 rounded-pill text-shadow">
+    <a href="{{route('farm.createItem')}}" class="w-100 btn btn-success mt-5 py-5 fs-2 rounded-pill text-shadow">
         <i class="fa-solid fa-apple-whole"></i>
         List More Organics
     </a>
@@ -34,7 +34,7 @@
     </a>
 
         {{-- Fixed Button --}}
-        <a href="{{route('showUpdateProfile')}}" class="fixed-button bg-warning text-decoration-none fs-3">
+        <a href="{{route('editProfile')}}" class="fixed-button bg-warning text-decoration-none fs-3">
             <i class="fa-solid fa-pen-nib"></i>
         </a>
         

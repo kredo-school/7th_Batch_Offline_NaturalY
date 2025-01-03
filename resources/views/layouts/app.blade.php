@@ -200,7 +200,7 @@
 
                                     {{-- Update Profile --}}
                                     <div class="col-6 d-flex flex-column align-items-center">
-                                        <a class="dropdown-item p-0" href="{{route('showUpdateProfile')}}">
+                                        <a class="dropdown-item p-0" href="{{route('editProfile')}}">
                                             <i class="fa-solid fa-pen-nib text-secondary icon-sm"></i>
                                             <p class="text-secondary mt-1 mb-0 text-sm">Update</p>
                                         </a>

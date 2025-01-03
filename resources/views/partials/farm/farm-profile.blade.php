@@ -39,10 +39,8 @@
         {{-- Farm Products --}}
         <h5 class="mt-4">Products</h5>
         <div class="row g-3">
-            @foreach ($items as $item)
-                @for ($i = 0; $i < 4; $i++)
-                    @include('partials.farm.item-card', ['item' => $item])
-                @endfor
+            @foreach ($user->items as $item)
+                @include('partials.farm.item-card')
             @endforeach
         </div>
     </div>

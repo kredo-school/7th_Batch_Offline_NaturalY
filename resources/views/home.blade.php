@@ -57,23 +57,30 @@ padding: 0.4rem 2rem;
 
     {{-- Item Card --}}
     <p class="title mb-3">LET'S BITE ORGANIC</p>
+
     <div class="row g-3">
-        @foreach ($items as $item)
-            @for ($i = 0; $i < 8; $i++)
-                @include('partials.item-card', ['item' => $item])
-            @endfor
-        @endforeach
+        @forelse ($items->take(8) as $item)
+            @include('partials.item-card', ['item' => $item])
+        @empty
+            <div class="col-12">
+                <p class="text-center">No items to display at the moment.</p>
+            </div>
+        @endforelse
     </div>
+
+    
     <a href="{{route('allItems')}}" class="btn btn-outline-secondary w-100 mt-3 mb-5">Let's See More Organic Item</a>
 
     {{-- Farm Card --}}
     <p class="title mb-3 mt-5">SPOTLIGHT FARMS</p>
     <div class="row g-3">
-        @foreach ($farms as $farm)
-            @for ($i = 0; $i < 4; $i++)
-                @include('partials.farm-card', ['farm' => $farm])
-            @endfor
-        @endforeach
+        @forelse ($farms->take(4) as $farm)
+            @include('partials.farm-card', ['farm' => $farm])
+        @empty
+            <div class="col-12">
+            <p class="text-center">No Farms to display at the moment.</p>
+            </div>
+        @endforelse
     </div>
     <a href="{{route('allFarms')}}" class="btn btn-outline-secondary w-100 mt-3 mb-5">Let's See More Farm</a>
 

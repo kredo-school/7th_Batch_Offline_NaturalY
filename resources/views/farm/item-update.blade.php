@@ -8,20 +8,16 @@
             <span class="title text-start mx-5 mb-5 nav-color text-shadow">
                 UPDATE MY <span class="title text-dark">“GOOD BANANA”</span>
             </span>
-            <form method="GET" action="{{route('farm.index')}}">
+            <form method="post" action="{{ route('farm.updateItem', ['item_id' => $item->id]) }}" enctype="multipart/form-data">
                 @csrf
+                @method('PATCH')
                 @include('partials.farm.item-form')
-
-                <div class="row mx-4 mt-5">
-                    <div class="col-3">
-                        <a href="javascript:history.back()" class="btn btn-outline-secondary w-100 fs-4 py-1">Cancel</a>
-                    </div>
-                    <div class="col-9">
-                        <button type="submit" class="btn btn-outline-success w-100 fs-4 py-1">
-                            Update Organic !
-                        </button>
-                    </div>
+                <div class="mx-5">
+                    <button type="submit" class="btn btn-outline-success w-100 fs-4 py-1 mt-4">
+                    Update Organic !
+                    </button>
                 </div>
+                
             </form>
         </div>
     </div>

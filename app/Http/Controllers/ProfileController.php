@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\User;
@@ -91,7 +92,7 @@ class ProfileController extends Controller
     }
 
     // Move to Update Consumer Page
-    public function showUpdateProfile(){
+    public function editProfile(){
         $user = $this->user->findOrFail(Auth::user()->id);
         if ($user->role_id == 2) {
             return view('consumer.profile-update')->with('user',$user);
@@ -136,7 +137,7 @@ class ProfileController extends Controller
     
         $user->save();
         if ($user->role_id == 2) {
-            return redirect()->route('consumer.showProfile'); 
+            return redirect()->route('consumer.showProfile')->with('user', $user); 
         } elseif ($user->role_id == 3) {
             return redirect()->route('index')->with('user', $user);
         }

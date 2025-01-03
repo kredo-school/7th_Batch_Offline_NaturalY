@@ -181,11 +181,39 @@ background-image: linear-gradient( #70B563 0%, #c6ffbb 80%, #f1ffee 100%);
 
 
 .dropdown-menu {
-  max-width: 300px; /* 必要に応じて幅を調整 */
-  word-wrap: break-word; /* テキストの折り返しを有効にする */
+  max-width: 300px;
+  word-wrap: break-word; 
   overflow-wrap: break-word;
-  overflow-x: hidden; /* 水平方向のオーバーフローを隠す */
+  overflow-x: hidden; /
 }
+
+
+.card-img-top {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.scrollable {
+  display: block;
+  height: 100px; 
+  overflow-y: auto;
+}
+
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover; 
+}
+
+
+
 
 
 

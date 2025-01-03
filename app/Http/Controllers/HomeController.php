@@ -1,24 +1,27 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Item;
 
 class HomeController extends Controller
 {   
-    private $user;
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    
-    public function __construct(User $user)
+    private $user;
+    private $item;
+    public function __construct(User $user, Item $item)
     {
         $this->middleware('auth');
         $user = $user;
-
+        $this->item=$item; 
     }
 
     /**
@@ -26,50 +29,39 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    
 
-    public function getItems()
-    {
-        return [
-            [
-                'image' => '/storage/images/banana.jpg',
-                'favorites' => 20,
-                'title' => 'Good Banana',
-                'category' => 'Banana',
-                'description' => '10 Bananas',
-                'price' => 15.99,
-                'farm_image' => '/storage/images/topbanner.jpg',
-                'farm_name' => 'Farm Name',
-            ]
-        ];
-    }
     public function getFarms()
     {
-        return [
-            [
-                'image' => '/storage/images/topbanner.jpg',
-                'name' => 'NATURAL YIELD FARM',
-                'followers' => 120,
-                'category' => 'Cucumber',
-                'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            ]
-        ];
+        return User::where('role_id', 3)->orderBy('created_at', 'desc');
+    }
+    public function getItems()
+    {
+        return Item::orderBy('created_at', 'desc');
     }
 
+    // Home Page
     public function index()
     {   
         $user = Auth::user();
-        $items = $this->getItems(); 
-        $farms = $this->getFarms(); 
-        if ($user->role_id == 2) {
-            return view('home', compact('items','farms'))->with('user', $user);
-        } elseif ($user->role_id == 3) {
-            return view('farm.index', compact('items','farms'))->with('user', $user);
-        } elseif (is_null($user->role_id)) {
-            return view('home', compact('items', 'farms'));
-        }
+        $items = $this->getItems()->take(8)->get();
+        $farms = $this->getFarms()->take(4)->get();
+    
+        return $this->redirectBasedOnRole($user, $items, $farms);
     }
 
+    public function allItems()
+    {   
+        $items = $this->getItems()->paginate(8);
+        return view('all-items', compact('items'));
+    }
+
+    public function allFarms()
+    {   
+        $farms = $this->getFarms()->paginate(4); 
+        return view('all-farms', compact('farms'));
+    }
+    
+    // Register
     public function storeRole()
     {
         return view('auth.register-consumer');
@@ -85,17 +77,7 @@ class HomeController extends Controller
         return view('home');
     }
 
-    public function allItems()
-    {   
-        $items = $this->getItems(); 
-        return view('all-items', compact('items'));
-    }
-
-    public function allFarms()
-    {   
-        $farms = $this->getFarms(); 
-        return view('all-farms', compact('farms'));
-    }
+    
     public function showItem()
     {   
         $reviews = [

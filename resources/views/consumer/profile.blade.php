@@ -16,7 +16,8 @@
         <div class="row">
             <div class="col">
                 <h5 class="mt-4">Address</h5>
-                <p class="card-text">{{$user->address}}, {{$user->zip_code}}, JAPAN</p>
+                <p class="my-0">〒{{$user->zip_code}}</p>
+                <p class="card-text">{{$user->prefecture}}, {{$user->address}},JAPAN</p>
                 <h5 class="mt-4">Phone Number</h5>
                 <p class="card-text">{{$user->phone_number}}</p>
             </div>
@@ -30,7 +31,7 @@
         </div>
     </div>
 
-    <a href="{{route('showUpdateProfile')}}" class="btn fixed-button text-decoration-none text-orange">
+    <a href="{{route('editProfile')}}" class="btn fixed-button text-decoration-none text-orange">
         <i class="fa-solid fa-pen-nib fs-2 text-white mb-0 position-relative top-25"></i>
     </a>
     

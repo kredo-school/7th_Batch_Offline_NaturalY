@@ -31,8 +31,8 @@ Route::group(['middleware'=>'auth'], function(){
     Route::post('/register-farm', [ProfileController::class, 'registerFarm'])->name('registerFarm');
 
     // Update Profile for cnsumer and farm
-    Route::patch('/profile-update/form', [ProfileController::class, 'UpdateProfile'])->name('UpdateProfile');
-    Route::get('/profile-update', [ProfileController::class, 'showUpdateProfile'])->name('showUpdateProfile');
+    Route::get('/profile/edit', [ProfileController::class, 'editProfile'])->name('editProfile');
+    Route::patch('/profile/update', [ProfileController::class, 'UpdateProfile'])->name('UpdateProfile');
 
     /**
      * Routes related to CONSUMER
@@ -56,11 +56,13 @@ Route::group(['middleware'=>'auth'], function(){
      */
     Route::group(['prefix'=>'farm', 'as'=>'farm.', 'middleware'=>'auth'],function(){
         Route::get('/', [FarmController::class, 'index'])->name('index');
-        Route::get('/farm-profile-update', [FarmController::class, 'showUpdateFarmProfile'])->name('showUpdateFarmProfile');
+        Route::get('/list-item', [FarmController::class, 'createItem'])->name('createItem');
+        Route::post('/store-item', [FarmController::class, 'storeItem'])->name('storeItem');
+        Route::get('/item/{item_id}', [FarmController::class, 'showItem'])->name('showItem');
+        Route::get('/item/edit/{item_id}', [FarmController::class, 'editItem'])->name('editItem');
+        Route::patch('/item/update/{item_id}', [FarmController::class, 'updateItem'])->name('updateItem');
         
         // Pending Route
-        Route::get('/profile-update', [FarmController::class, 'profileUpdate'])->name('profileUpdate');
-        Route::get('/list-item', [FarmController::class, 'itemList'])->name('itemList');
         Route::get('/item-update', [FarmController::class, 'itemUpdate'])->name('itemUpdate');
         Route::get('/order-management', [FarmController::class, 'orderMng'])->name('orderMng');
         Route::get('/analysis', [FarmController::class, 'analysis'])->name('analysis');
